@@ -2,642 +2,576 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UP CNET Complete Practice Engine</title>
-    <!-- Tailwind CSS CDN for high fidelity production styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OFFICIAL UP CNET 2026 REVISION PORTAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom UI Transitions and Pulse Effects */
-        @keyframes timerPulse {
-            0%, 100% { background-color: #fef2f2; border-color: #fecaca; color: #dc2626; }
-            50% { background-color: #fee2e2; border-color: #ef4444; color: #b91c1c; }
+        -webkit-tap-highlight-color: transparent;
+        body { -webkit-overflow-scrolling: touch; }
+        .custom-scroll::-webkit-scrollbar { width: 5px; height: 5px; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        @keyframes dynamicWarning {
+            0%, 100% { background-color: #fff5f5; border-color: #feb2b2; color: #e53e3e; }
+            50% { background-color: #fed7d7; border-color: #fc8181; color: #c53030; }
         }
-        .timer-warning { animation: timerPulse 1.2s infinite; }
-        /* Custom scrollbar handling for large matrix components */
-        .custom-scroll::-webkit-scrollbar { width: 6px; }
-        .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 8px; }
-        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
-        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .timer-alert { animation: dynamicWarning 1.2s infinite; }
     </style>
 </head>
-<body class="bg-slate-50 min-h-screen font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased font-sans select-none">
 
-    <!-- PORTAL SCREEN 1: CANDIDATE ONAIR REGISTRATION -->
-    <div id="registration-view" class="min-h-screen flex flex-col justify-center items-center p-4">
-        <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 max-w-xl w-full">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="p-3 bg-blue-100 text-blue-600 rounded-xl font-bold text-xl">🩺</div>
-                <div>
-                    <h1 class="text-2xl font-extrabold text-slate-800 tracking-tight">UP CNET Exam Engine</h1>
-                    <p class="text-sm text-slate-500 font-medium">ABVMU Allied Health & Nursing Entrance Protocol</p>
-                </div>
+    <div id="registration-gateway" class="flex-1 flex flex-col justify-center items-center p-4">
+        <div class="bg-white px-6 py-8 rounded-2xl shadow-xl border border-slate-100 w-full max-w-md">
+            <div class="text-center mb-6">
+                <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-2xl font-black text-2xl mb-2">⚖️</div>
+                <h1 class="text-2xl font-black text-slate-900 tracking-tight">ABVMU UP CNET 2026</h1>
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mt-0.5">High-Competition Target Engine</p>
             </div>
 
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-6 text-sm text-slate-600 space-y-2">
-                <span class="font-bold text-slate-800 text-base block border-b pb-1 mb-2">Mandatory Test Parameters:</span>
-                <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
-                    <div class="p-2 bg-white border rounded-lg">⏱ Duration: <span class="text-blue-600">140 Minutes</span></div>
-                    <div class="p-2 bg-white border rounded-lg">📋 Total Items: <span class="text-blue-600">120 MCQs</span></div>
-                    <div class="p-2 bg-white border rounded-lg">🎯 Structure: <span class="text-blue-600">24 per Subject</span></div>
-                    <div class="p-2 bg-white border rounded-lg">🚫 Negative Marks: <span class="text-emerald-600">None</span></div>
+            <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6 text-xs text-slate-600 space-y-2">
+                <span class="font-extrabold text-slate-800 text-sm block border-b pb-1">Rigid Test Configuration Parameters:</span>
+                <div class="grid grid-cols-2 gap-2 font-mono font-bold text-center">
+                    <div class="bg-white p-2 border rounded-lg">📋 Items: 120 MCQs</div>
+                    <div class="bg-white p-2 border rounded-lg">⏱ Time: 140 Mins</div>
+                    <div class="bg-white p-2 border rounded-lg">🎯 Subjects: 5 Blocks</div>
+                    <div class="bg-white p-2 border rounded-lg">🚫 Negative Marks: 0</div>
                 </div>
-                <p class="text-xs text-slate-400 pt-2 font-medium leading-relaxed">
-                    Notice: Upon clicking generation, the testing core running within the browser sandbox context performs an immediate index selection extracting unique items per module.
+                <p class="text-[11px] text-slate-400 leading-relaxed pt-2">
+                    Notice: This engine shuffles and isolates exactly 24 specialized conceptual questions across each core segment to assemble an authentic 2026 prediction set.
                 </p>
             </div>
 
             <div class="mb-6">
-                <label class="block text-slate-700 font-bold mb-2 text-sm tracking-wide">Candidate Full Name</label>
+                <label class="block text-slate-700 font-extrabold text-xs uppercase tracking-wider mb-2">Examinee Candidate Name</label>
                 <input 
                     type="text" 
-                    id="candidate-name-field"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 font-medium placeholder-slate-400 transition"
-                    placeholder="Provide name to compile examination package..."
+                    id="examinee-identity-field"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 font-semibold text-sm transition"
+                    placeholder="Enter full legal name..."
                 />
             </div>
 
-            <button onclick="initializeTestPipeline()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl shadow-md shadow-blue-200 transition transform active:scale-[0.98]">
-                Generate Randomized Exam Layout
+            <button onclick="launchSecureTestingEnvironment()" class="w-full bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-bold py-4 px-4 rounded-xl shadow-md transition text-sm tracking-wide">
+                Compile & Start Examination
             </button>
         </div>
     </div>
 
-    <!-- PORTAL SCREEN 2: ACTIVE REVISION EXAMINATION ENVIRONMENT -->
-    <div id="testing-environment-view" class="hidden min-h-screen flex flex-col text-slate-800">
-        <!-- Interactive Session Sticky Header -->
-        <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center sticky top-0 z-50 shadow-sm">
-            <div class="flex items-center gap-4">
-                <div class="hidden sm:block p-2 bg-slate-100 rounded-lg font-bold text-lg">📝</div>
-                <div>
-                    <h2 class="font-bold text-slate-800 text-base sm:text-lg flex items-center gap-2">
-                        <span id="subject-category-badge" class="px-2.5 py-0.5 bg-blue-100 text-blue-700 rounded-md text-xs uppercase font-black tracking-wider">
-                            SUBJECT
-                        </span>
-                    </h2>
-                    <p class="text-xs text-slate-400 font-semibold">Examinee Context ID: <span id="runtime-examinee-name" class="text-slate-600"></span></p>
-                </div>
+    <div id="testing-workspace" class="hidden flex-1 flex flex-col">
+        <header class="bg-white border-b border-slate-200 px-4 py-3 flex justify-between items-center sticky top-0 z-50 shadow-sm">
+            <div class="min-w-0">
+                <span id="active-subject-tag" class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] uppercase font-black tracking-widest block w-fit mb-0.5">SUBJECT</span>
+                <h2 class="font-bold text-slate-700 text-xs truncate">Context: <span id="runtime-candidate-name" class="font-normal text-slate-500">Student</span></h2>
             </div>
-
-            <!-- Countdown Device -->
-            <div id="chronometer-capsule" class="px-5 py-2.5 rounded-xl border border-slate-200 font-mono font-bold text-base sm:text-xl transition bg-slate-50 text-slate-700 shadow-sm flex items-center gap-2">
-                <span class="text-sm opacity-60">TIME REMAINING:</span>
-                <span id="chronometer-display">02:20:00</span>
+            <div id="chronometer-box" class="px-3 py-1.5 rounded-lg border border-slate-200 font-mono font-bold text-sm bg-slate-50 text-slate-700 shadow-sm transition">
+                ⏱ <span id="chronometer-digits">02:20:00</span>
             </div>
         </header>
 
-        <!-- Main Real-Time Evaluation Grid Layout Workspace -->
-        <div class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
-            
-            <!-- Left Wing Workspace: Core Exam Processing Terminal -->
-            <main class="lg:col-span-3 flex flex-col justify-between bg-white p-6 rounded-2xl shadow-sm border border-slate-200 min-h-[500px]">
-                <div id="active-item-card">
-                    <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-3">
-                        <div id="item-meta-counter" class="text-xs sm:text-sm font-bold text-slate-400 tracking-wider uppercase">Question 1 of 120</div>
-                        <div id="item-status-pill" class="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 uppercase tracking-wide">Unanswered</div>
+        <div class="flex-1 flex flex-col p-4 max-w-3xl w-full mx-auto gap-4">
+            <main class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex-1 flex flex-col justify-between min-h-[420px]">
+                <div id="item-card">
+                    <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-2">
+                        <span id="item-counter" class="text-xs font-black text-slate-400 uppercase tracking-widest">Question 1 of 120</span>
+                        <span id="item-status-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase tracking-wide">Unsaved</span>
                     </div>
+
+                    <p id="item-prose" class="text-base font-bold text-slate-800 mb-5 leading-relaxed"></p>
                     
-                    <h3 id="item-question-prose" class="text-lg sm:text-xl font-bold text-slate-800 mb-6 leading-relaxed">Loading questions data segment pool structure from local index vectors...</h3>
-                    
-                    <!-- Form Option Action System Container -->
-                    <div class="space-y-3.5">
-                        <button onclick="commitUserChoice('A')" id="option-node-A" class="option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-slate-200 hover:bg-slate-50 text-slate-700 group">
-                            <span id="option-indicator-A" class="w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-slate-100 text-slate-400 group-hover:bg-slate-200 transition">A</span>
-                            <span id="option-label-text-A" class="flex-1">Option Variable A</span>
+                    <div class="space-y-2.5">
+                        <button onclick="registerSelection('A')" id="btn-node-A" class="option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-slate-200 text-slate-700 active:bg-slate-50">
+                            <span id="badge-node-A" class="w-6 h-6 flex items-center justify-center rounded bg-slate-100 font-mono text-xs text-slate-400 font-black">A</span>
+                            <span id="text-node-A" class="flex-1 leading-tight"></span>
                         </button>
-                        <button onclick="commitUserChoice('B')" id="option-node-B" class="option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-slate-200 hover:bg-slate-50 text-slate-700 group">
-                            <span id="option-indicator-B" class="w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-slate-100 text-slate-400 group-hover:bg-slate-200 transition">B</span>
-                            <span id="option-label-text-B" class="flex-1">Option Variable B</span>
+                        <button onclick="registerSelection('B')" id="btn-node-B" class="option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-slate-200 text-slate-700 active:bg-slate-50">
+                            <span id="badge-node-B" class="w-6 h-6 flex items-center justify-center rounded bg-slate-100 font-mono text-xs text-slate-400 font-black">B</span>
+                            <span id="text-node-B" class="flex-1 leading-tight"></span>
                         </button>
-                        <button onclick="commitUserChoice('C')" id="option-node-C" class="option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-slate-200 hover:bg-slate-50 text-slate-700 group">
-                            <span id="option-indicator-C" class="w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-slate-100 text-slate-400 group-hover:bg-slate-200 transition">C</span>
-                            <span id="option-label-text-C" class="flex-1">Option Variable C</span>
+                        <button onclick="registerSelection('C')" id="btn-node-C" class="option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-slate-200 text-slate-700 active:bg-slate-50">
+                            <span id="badge-node-C" class="w-6 h-6 flex items-center justify-center rounded bg-slate-100 font-mono text-xs text-slate-400 font-black">C</span>
+                            <span id="text-node-C" class="flex-1 leading-tight"></span>
                         </button>
-                        <button onclick="commitUserChoice('D')" id="option-node-D" class="option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-slate-200 hover:bg-slate-50 text-slate-700 group">
-                            <span id="option-indicator-D" class="w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-slate-100 text-slate-400 group-hover:bg-slate-200 transition">D</span>
-                            <span id="option-label-text-D" class="flex-1">Option Variable D</span>
+                        <button onclick="registerSelection('D')" id="btn-node-D" class="option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-slate-200 text-slate-700 active:bg-slate-50">
+                            <span id="badge-node-D" class="w-6 h-6 flex items-center justify-center rounded bg-slate-100 font-mono text-xs text-slate-400 font-black">D</span>
+                            <span id="text-node-D" class="flex-1 leading-tight"></span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Footer Navigation Panel -->
-                <div class="flex justify-between items-center border-t border-slate-100 pt-6 mt-8">
-                    <button id="ctrl-prev-btn" onclick="executeStepNavigation(-1)" class="px-5 py-3 rounded-xl border border-slate-200 font-bold text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-20 disabled:pointer-events-none transition shadow-sm">
-                        ← Previous
+                <div class="flex justify-between items-center border-t border-slate-100 pt-4 mt-6">
+                    <button id="nav-prev" onclick="executeStepChange(-1)" class="px-4 py-2.5 rounded-xl border border-slate-200 font-bold text-xs text-slate-600 active:bg-slate-100 disabled:opacity-20 disabled:pointer-events-none transition">
+                        ← Prev
                     </button>
                     <div class="flex gap-2">
-                        <button id="ctrl-clear-btn" onclick="clearActiveChoice()" class="px-4 py-3 rounded-xl text-sm font-bold text-slate-400 hover:text-red-500 transition">
-                            Clear Response
+                        <button onclick="clearResponse()" class="px-3 py-2.5 text-xs font-bold text-slate-400 active:text-red-500">Clear</button>
+                        <button id="nav-next" onclick="executeStepChange(1)" class="px-5 py-2.5 rounded-xl bg-slate-800 text-white font-bold text-xs tracking-wide active:bg-slate-900 transition">
+                            Next →
                         </button>
-                        <button id="ctrl-next-btn" onclick="executeStepNavigation(1)" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-sm tracking-wide transition shadow-sm">
-                            Next Question →
-                        </button>
-                        <button id="ctrl-finalize-btn" onclick="triggerManualSubmission()" class="hidden px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm tracking-wide transition shadow-md shadow-emerald-100">
-                            Finish & Submit Exam
+                        <button id="nav-submit" onclick="terminateSessionRequest()" class="hidden px-5 py-2.5 rounded-xl bg-emerald-600 text-white font-extrabold text-xs tracking-wide active:bg-emerald-700 transition shadow-sm">
+                            Submit Exam
                         </button>
                     </div>
                 </div>
             </main>
 
-            <!-- Right Wing Workspace: Matrix Navigation & Summary Analytics View -->
-            <aside class="flex flex-col gap-4">
-                <!-- Subject Filters Menu Deck -->
-                <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
-                    <h4 class="font-extrabold text-slate-700 text-xs uppercase tracking-wider mb-2.5">Jump to Section</h4>
-                    <div id="subject-jump-deck" class="flex flex-wrap gap-1.5">
-                        <!-- Auto-compiled subject tags hook -->
-                    </div>
+            <aside class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex justify-between items-center mb-2">
+                    <h4 class="font-extrabold text-slate-700 text-xs uppercase tracking-wider">Matrix Map Navigator</h4>
+                    <span id="progress-indicator-pill" class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">0/120 Done</span>
                 </div>
-
-                <!-- Grid Jump Array Container -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 flex-1 flex flex-col min-h-[350px]">
-                    <div class="flex justify-between items-center mb-3">
-                        <h4 class="font-extrabold text-slate-700 text-xs uppercase tracking-wider">Question Matrix</h4>
-                        <span id="completion-stats-badge" class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">0/120 Done</span>
-                    </div>
-                    
-                    <div id="matrix-scroll-deck" class="grid grid-cols-4 sm:grid-cols-5 gap-1.5 overflow-y-auto max-h-[380px] pr-1 custom-scroll flex-1">
-                        <!-- Compiled on initialization -->
-                    </div>
-                    
-                    <div class="mt-4 pt-4 border-t border-slate-100 text-xs space-y-2 font-bold text-slate-400">
-                        <div class="flex items-center gap-2.5"><span class="w-3 h-3 bg-emerald-500 rounded-md shadow-sm"></span> Answered Selection</div>
-                        <div class="flex items-center gap-2.5"><span class="w-3 h-3 bg-blue-600 rounded-md shadow-sm"></span> Active Working Item</div>
-                        <div class="flex items-center gap-2.5"><span class="w-3 h-3 bg-slate-100 border border-slate-200 rounded-md"></span> Unvisited / Blank</div>
-                    </div>
-                </div>
+                <div id="matrix-horizontal-strip" class="flex gap-1.5 overflow-x-auto py-1 custom-scroll"></div>
             </aside>
-
         </div>
     </div>
 
-    <!-- PORTAL SCREEN 3: HIGH-FIDELITY RESULT ANALYTICS GENERATOR -->
-    <div id="evaluation-summary-view" class="hidden min-h-screen flex flex-col justify-center items-center p-4">
-        <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl w-full text-center border border-slate-100">
-            <div class="inline-flex p-4 bg-emerald-100 text-emerald-600 rounded-full font-black text-3xl mb-4 shadow-sm shadow-emerald-50 text-center justify-center items-center">✓</div>
-            <h2 class="text-3xl font-black text-slate-800 tracking-tight mb-1">CNET Performance Scorecard</h2>
-            <p class="text-slate-500 text-sm mb-6 font-medium">ABVMU Entrance Metrics compiled for <span id="final-cardholder-name" class="font-bold text-slate-700"></span></p>
+    <div id="report-view" class="hidden flex-1 flex flex-col justify-center items-center p-4">
+        <div class="bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 w-full max-w-md text-center">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full font-black text-xl mx-auto flex items-center justify-center shadow-sm mb-3">✓</div>
+            <h2 class="text-xl font-black text-slate-900 tracking-tight">CNET Official Evaluation</h2>
+            <p class="text-xs text-slate-400 font-medium mb-4">Report Compiled For: <span id="report-name" class="font-bold text-slate-600"></span></p>
             
-            <!-- Result Metric Layout Panel Matrix -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <div class="bg-slate-50 border rounded-xl p-4">
-                    <span class="text-slate-400 block text-xs uppercase tracking-wider font-extrabold mb-1">Final Result Score</span>
-                    <span id="calculated-score-out" class="text-4xl font-black text-blue-600">0</span>
-                    <span id="max-possible-points" class="text-xs text-slate-400 block mt-0.5">out of 120 Marks</span>
+            <div class="bg-slate-50 border rounded-xl p-4 mb-4 grid grid-cols-2 gap-2 text-center">
+                <div class="col-span-2 border-b pb-2 mb-2">
+                    <span class="text-slate-400 block text-[10px] uppercase tracking-wider font-extrabold">Final Obtained Score</span>
+                    <span id="calculated-score" class="text-4xl font-black text-blue-600">0</span>
+                    <span class="text-xs text-slate-400 block font-bold">out of 120 Marks</span>
                 </div>
-                <div class="bg-slate-50 border rounded-xl p-4">
-                    <span class="text-slate-400 block text-xs uppercase tracking-wider font-extrabold mb-1">Accuracy Rating</span>
-                    <span id="accuracy-percentage-out" class="text-4xl font-black text-indigo-600">0%</span>
-                    <span class="text-xs text-slate-400 block mt-0.5">Based on submitted items</span>
+                <div>
+                    <span class="text-slate-400 block text-[9px] uppercase tracking-wider font-bold">Attempted Items</span>
+                    <span id="calculated-attempts" class="text-lg font-black text-slate-700">0 / 120</span>
                 </div>
-                <div class="bg-slate-50 border rounded-xl p-4">
-                    <span class="text-slate-400 block text-xs uppercase tracking-wider font-extrabold mb-1">Questions Attempted</span>
-                    <span id="attempted-metric-out" class="text-4xl font-black text-emerald-600">0</span>
-                    <span class="text-xs text-slate-400 block mt-0.5">out of 120 targets</span>
+                <div>
+                    <span class="text-slate-400 block text-[9px] uppercase tracking-wider font-bold">Accuracy Rating</span>
+                    <span id="calculated-accuracy" class="text-lg font-black text-indigo-600">0%</span>
                 </div>
             </div>
 
-            <!-- Subject Breakdown Table Segment -->
-            <div class="border border-slate-200 rounded-xl overflow-hidden mb-6 text-left">
-                <div class="bg-slate-50 px-4 py-2.5 border-b font-extrabold text-xs text-slate-500 uppercase tracking-wider">Subject Analytics Breakdown</div>
-                <div id="subject-breakdown-rows" class="divide-y text-sm">
-                    <!-- Javascript injected rows -->
-                </div>
+            <div class="border rounded-xl overflow-hidden text-left mb-5 text-xs">
+                <div class="bg-slate-100 px-3 py-2 font-bold text-slate-600 uppercase tracking-wider text-[10px]">Subject Breakdown Matrix</div>
+                <div id="breakdown-rows-container" class="divide-y"></div>
             </div>
-            
-            <button onclick="window.location.reload()" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-6 rounded-xl transition shadow-md">
-                Re-Generate Completely New Paper Set
+
+            <button onclick="window.location.reload()" class="w-full bg-slate-900 text-white font-bold py-3 px-4 rounded-xl text-sm transition">
+                Generate New Attempt Layout
             </button>
         </div>
     </div>
 
-    <!-- CORE LOGIC FRAMEWORK & SEEDED COMPREHENSIVE DATA INFRASTRUCTURE -->
     <script>
-        /**
-         * MASSIVE SEEDED DATA VECTOR POOL
-         * This structured repository is compiled using architectural trends seen in past CNET exam papers.
-         * The database structure supports adding thousands of questions per array block seamlessly.
-         */
-        const fullDatabaseRepository = {
+        // STRICT INBUILT EXAM BLUEPRINT REPOSITORY (EXACTLY 24 QUESTIONS PER SUBJECT = 120 TARGET INTEGRATIONS)
+        const embeddedMasterDatabase = {
             physics: [
-                { id:"P1", subject:"Physics", question_text:"Which of the following is the standard SI unit of electric potential difference?", option_a:"Ampere", option_b:"Volt", option_c:"Ohm", option_d:"Tesla", correct_option:"B" },
-                { id:"P2", subject:"Physics", question_text:"If the absolute distance vector separating two point masses is precisely doubled, the gravitational attraction factor changes to:", option_a:"Multiplied by two", option_b:"Reduced by half", option_c:"Multiplied by four", option_d:"Reduced to one-fourth", correct_option:"D" },
-                { id:"P3", subject:"Physics", question_text:"The phenomena of polarization observed within wave systems proves definitively that light possesses a:", option_a:"Transverse configuration profile", option_b:"Longitudinal compression layout", option_c:"Stationary acoustic baseline", option_d:"Mechanical medium dependence", correct_option:"A" },
-                { id:"P4", subject:"Physics", question_text:"The structural property of resistance inside a linear metallic crystalline matrix is inversely proportional to which parameter?", option_a:"Absolute path length", option_b:"Applied electromagnetic potential", option_c:"Cross-sectional area footprint", option_d:"Ambient operating temperature", correct_option:"C" },
-                { id:"P5", subject:"Physics", question_text:"What type of mirror is utilized within automotive optical assemblies to provide drivers with a widespread rear field of view?", option_a:"Parabolic concave geometry", option_b:"Planar reflective substrate", option_c:"Diverging convex topography", option_d:"Cylindrical double-focus profile", correct_option:"C" },
-                { id:"P6", subject:"Physics", question_text:"The working operation profile of an optical communication fiber relies completely on which fundamental optical principle?", option_a:"Constructive wave diffraction", option_b:"Total internal reflection mechanics", option_c:"Isotropic polarization scattering", option_d:"Specular beam refraction", correct_option:"B" },
-                { id:"P7", subject:"Physics", question_text:"Which specific electromagnetic radiation band features the absolute lowest energetic photon footprint?", option_a:"Gamma ray emissions", option_b:"Ultraviolet wavefronts", option_c:"Infrared structural bands", option_d:"Radio frequency spectra", correct_option:"D" },
-                { id:"P8", subject:"Physics", question_text:"The structural work done in forcing an object along a closed loop trajectory within an idealized conservative field equals:", option_a:"Indeterminate scalar infinity", option_b:"Precisely zero", option_c:"Direct product of path velocity", option_d:"Half of maximum potential", correct_option:"B" },
-                { id:"P9", subject:"Physics", question_text:"What happens to the terminal capacitance rating of a parallel plate capacitor assembly if a solid dielectric block is integrated?", option_a:"Decreases linearly", option_b:"Increases according to dielectric constant", option_c:"Drops immediately to zero value", option_d:"Becomes highly erratic", correct_option:"B" },
-                { id:"P10", subject:"Physics", question_text:"The dimensional expression formula matching the metric property of universal thermodynamic pressure matches which representation?", option_a:"[M L^1 T^-2]", option_b:"[M L^-1 T^-2]", option_c:"[M L^2 T^-3]", option_d:"[M L^-2 T^-1]", correct_option:"B" },
-                // Expanding the array structure with scaled iterations to safely handle structural expansion loops
-                ...Array.from({length: 30}, (_, i) => ({
-                    id: `P_EXT_${i+11}`,
-                    subject: "Physics",
-                    question_text: `[High-Yield Module Core practice item #${i+11}]. Which primary parameter directly determines the absolute wave propagation frequency observed inside an idealized acoustic line string context?`,
-                    option_a: "Source vibrational displacement profile", option_b: "Density threshold variables of transmission medium", option_c: "Elasticity coefficient of boundary limits", option_d: "Intrinsic length parameters of system matrix",
-                    correct_option: "A"
-                }))
+                { q: "A cell of constant internal resistance 'r' balances across a variable external load resistance 'R'. The maximum power transmission into the external resistor manifests exclusively when:", a: "R is exactly equal to r", b: "R matches twice the value of r", c: "R diminishes to half the value of r", d: "R reaches structural infinity", ans: "A" },
+                { q: "The dimensional representation matching the structural definition of the universal coefficient of viscosity [η] corresponds to:", a: "[M L^-1 T^-1]", b: "[M L^-2 T^-1]", b: "[M L^1 T^-2]", d: "[M L^-1 T^-2]", ans: "A" },
+                { q: "When a beam of unpolarized light passes through an idealized polaroid sheet, its resultant electromagnetic wave intensity parameter drops by precisely:", a: "One-half", b: "One-fourth", c: "Three-fourths", d: "Zero reduction", ans: "A" },
+                { q: "What constitutes the fundamental physical phenomenon behind the operation of premium modern optical fibers utilized within healthcare laser diagnostics?", a: "Total internal reflection", b: "Constructive wave diffraction patterns", c: "Isotropic Rayleigh scattering", d: "Specular interface polarization", ans: "A" },
+                { q: "An alternating current circuit contains an ideal inductor and a capacitor in series. Under conditions of pure electrical resonance, the net systemic impedance value drops to:", a: "Zero ohms", b: "Infinite resistance parameters", c: "Purely inductive reactance values", d: "Geometric mean of components", ans: "A" },
+                { q: "A target convex lens configuration possesses a focal distance measurement of 20 cm in ambient air. If submerged completely inside a water tank, its net operational focal length will:", a: "Increase significantly", b: "Decrease proportionally", c: "Stay precisely constant", d: "Drop immediately to zero value", ans: "A" },
+                { q: "The absolute work executed while forcing an electrical charge along an idealized closed loop track within a static electrostatic field condition equals:", a: "Exactly zero", b: "Direct product of path coordinates", c: "Infinite scale parameters", d: "Dependent on total velocity limits", ans: "A" },
+                { q: "Which electromagnetic spectrum slice contains wavefront items carrying the absolute highest structural photon energy thresholds?", a: "Gamma ray emissions", b: "Ultraviolet bands", c: "X-ray diagnostic emissions", d: "Micro-wave tracking bands", ans: "A" },
+                { q: "The threshold phenomenon of stopping potential inside the classical photoelectric effect equation maps a linear dependence directly to the:", a: "Frequency of incident photon beams", b: "Intensity threshold of light source", c: "Work function limits of collecting plates", d: "Surface area metrics of emitter targets", ans: "A" },
+                { q: "If the total speed coordinate tracking a particle traveling an explicit linear path doubles, its corresponding de Broglie wavelength parameter scales by:", a: "Factor of one-half", b: "Factor of two", c: "Factor of four", d: "Remains fully unchanged", ans: "A" },
+                { q: "The fundamental operational framework of a standard hydraulic brake assembly relies completely on which fluid dynamics law?", a: "Pascal's Law of pressure distribution", b: "Bernoulli's principle of fluid conservation", c: "Torricelli's theorem of efflux escape", d: "Archimedes' law of buoyant upthrust", ans: "A" },
+                { q: "Under thermodynamic conditions tracking a perfectly isothermal gas expansion sequence, which parameter holds an absolute constant value?", a: "Total internal thermal energy", b: "Systemic pressure gradients", c: "Volumetric coordinate limits", d: "External structural work output", ans: "A" },
+                { q: "What is the net phase variance separating the spatial coordinates of velocity and acceleration vectors inside an object exhibiting Simple Harmonic Motion?", a: "π/2 radians", b: "π radians", c: "2π radians", d: "Zero phase variance", ans: "A" },
+                { q: "Two coherent acoustic wavefronts maintaining an structural intensity balance ratio of 9:1 interfere. Find the ratio of maximum to minimum resultant intensities:", a: "4:1 ratio scale", b: "3:1 ratio scale", c: "9:1 ratio scale", d: "16:1 ratio scale", ans: "A" },
+                { q: "The core functionality profile tracking the operation of a step-up voltage transformer relies completely on:", a: "Mutual electromagnetic induction", b: "Self-induction feedback loops", c: "Eddy current dispersion mechanics", d: "Electrostatic shielding parameters", ans: "A" },
+                { q: "What transformation structural event is observed inside the atomic core during a spontaneous beta-minus emission process?", a: "A neutron converts to a proton", b: "A proton transitions to a neutron", c: "An orbital electron splits off completely", d: "Two heavy nucleons combine together", ans: "A" },
+                { q: "The magnetic susceptibility property tracking a perfectly diamorphic material configuration matches which condition?", a: "Small and structurally negative", b: "Large and highly positive", c: "Precisely zero parameters", d: "Highly erratic and variable", ans: "A" },
+                { q: "An object is projected upwards at an angle of 45 degrees relative to a flat horizontal plain. The ratio of its maximum height parameter to its horizontal range maps to:", a: "1:4 scale factor", b: "1:2 scale factor", c: "1:1 scale factor", d: "2:1 scale factor", ans: "A" },
+                { q: "The physical constant representing the velocity of escape from the gravitational field boundary of planet Earth sits closest to:", a: "11.2 km/s", b: "11.2 m/s", c: "9.8 km/s", d: "7.4 km/s", ans: "A" },
+                { q: "Which specific tracking parameter defines the pitch profile of an acoustic sound wave processed by human auditory receptors?", a: "Wave vibrational frequency coordinates", b: "Amplitude scale thresholds", c: "Waveform phase complexity parameters", d: "Velocity configurations of propagation", ans: "A" },
+                { q: "The operational resistance metric tracking an ideal electrical voltmeter must possess what structural value?", a: "Infinite resistance parameters", b: "Precisely zero ohms scale", c: "Exactly one hundred ohms", d: "Highly variable dynamic feedback scale", ans: "A" },
+                { q: "What structural phenomenon occurs to the terminal electrical resistance profile of an intrinsic semiconductor crystal configuration as temperature rises?", a: "Decreases exponentially", b: "Increases linearly", c: "Stays perfectly fixed", d: "Fluctuates uncontrollably", ans: "A" },
+                { q: "The universal physical law stating that the total radiant energy emitted per unit area of a blackbody scales with the fourth power of absolute temperature is:", a: "Stefan-Boltzmann Law", b: "Wein's Displacement Law", c: "Planck's Quantum Law", d: "Newton's Cooling Law", ans: "A" },
+                { q: "If a fluid flows smoothly through a pipe of varying cross-sections, the internal pressure parameter drops down lowest at points where:", a: "The fluid velocity reaches its absolute maximum", b: "The cross-sectional pipe footprint spreads widest", c: "The fluid stream comes to a complete rest", d: "The pipe path bends upwards vertically", ans: "A" }
             ],
             chemistry: [
-                { id:"C1", subject:"Chemistry", question_text:"What is the absolute oxidation rating scale calculated for Chromium within a Potassium Dichromate (K2Cr2O7) crystalline molecular system?", option_a:"+3 balance layer", option_b:"+4 balance layer", option_c:"+6 balance layer", option_d:"+7 balance layer", correct_option:"C" },
-                { id:"C2", subject:"Chemistry", question_text:"Which molecular formulation compound showcases the maximum degree of absolute electronegative intermolecular hydrogen bonding?", option_a:"Hydrogen Chloride (HCl)", option_b:"Hydrogen Sulfide (H2S)", option_c:"Ammonia gas (NH3)", option_d:"Hydrogen Fluoride liquid (HF)", correct_option:"D" },
-                { id:"C3", subject:"Chemistry", question_text:"An aqueous system maintaining an explicit measured pH parameter tracked at 4.0 carries a hydrogen ion concentration [H+] mapping to:", option_a:"10^-4 moles per liter", option_b:"10^-10 moles per liter", option_c:"4.0 absolute molar density", option_d:"10^4 moles per liter", correct_option:"A" },
-                { id:"C4", subject:"Chemistry", question_text:"The structural composition of a standard Alpha particle consists of which combination?", option_a:"Single isolated proton factor", option_b:"Two distinct protons paired with two neutrons", option_c:"High energy balance electron bundle", option_d:"Four isolated neutral neutrons", correct_option:"B" },
-                { id:"C5", subject:"Chemistry", question_text:"Which gas configuration demonstrates the fastest relative rate of molecular effusion under identical temperature conditions?", option_a:"Carbon Dioxide (CO2)", option_b:"Oxygen gas (O2)", option_c:"Methane gas (CH4)", option_d:"Nitrogen matrix (N2)", correct_option:"C" },
-                { id:"C6", subject:"Chemistry", question_text:"The configuration tracking rules known as Hund’s Rule of Maximum Multiplicity dictates which process?", option_a:"Electrons fill spatial orbits sequentially from lowest energy upward", option_b:"No pairing occurs in degenerate subshells until all hold one electron", option_c:"No two identical fermions can possess equivalent quantum numbers", option_d:"Velocity coordinates cannot be linked to certain space coordinates", correct_option:"B" },
-                { id:"C7", subject:"Chemistry", question_text:"Which structural crystalline element type exhibits the precise property known as amphoteric reaction equilibrium?", option_a:"Sodium matrix", option_b:"Calcium system", option_c:"Aluminum compound structures", option_d:"Barium compounds", correct_option:"C" },
-                { id:"C8", subject:"Chemistry", question_text:"What is the fundamental functional organic compound group marker sequence identifying an Aldehyde structure?", option_a:"-CHO linkage", option_b:"-COOH linkage", option_c:"-OH structural node", option_d:"-COOR structural node", correct_option:"A" },
-                { id:"C9", subject:"Chemistry", question_text:"What dynamic behavior is caused when a catalyst agent is introduced into a chemical reaction system?", option_a:"Forces shifting alignment vector constants toward product outcomes", option_b:"Lowers the required activation energy threshold profile", option_c:"Destroys operational reactant kinetic energy bounds", option_d:"Increases total systemic thermodynamic internal heat enthalpy", correct_option:"B" },
-                { id:"C10", subject:"Chemistry", question_text:"Which compound demonstrates a geometric molecular layout identified as perfectly linear?", option_a:"Water molecule (H2O)", option_b:"Carbon Dioxide (CO2)", option_c:"Sulfur Dioxide (SO2)", option_d:"Ammonia molecule (NH3)", correct_option:"B" },
-                ...Array.from({length: 30}, (_, i) => ({
-                    id: `C_EXT_${i+11}`,
-                    subject: "Chemistry",
-                    question_text: `[High-Yield Module Core practice item #${i+11}]. Which of the following state changes or internal matrix interactions demonstrates an irreversible exothermic chemical process profile?`,
-                    option_a: "Sublimation of pure iodine solids", option_b: "Combustion interaction of natural hydrocarbons", option_c: "Thermal liquefaction of industrial polymer masses", option_d: "Electrolytic decomposition of heavy liquid compounds",
-                    correct_option: "B"
-                }))
+                { q: "Which coordination chemical complex structure exhibits a geometric configuration identified as square planar?", a: "[Ni(CN)4]2- complex node", b: "[Ni(Cl)4]2- complex node", c: "[Fe(CN)6]4- complex node", d: "[Mn(Cl)4]2- complex node", ans: "A" },
+                { q: "During industrial electrolytic refining, metallic impurities maintaining a higher oxidation potential than the target metal pass into:", a: "The soluble electrolyte solution mix", b: "The insoluble anode mud sedimentation", c: "Deposits lining the cathode terminal", d: "Volatile gas combinations escaping boundaries", ans: "A" },
+                { q: "What is the absolute geometric hybridization profile assigned to the central sulfur atom inside a molecule of Sulfur Hexafluoride (SF6)?", a: "sp3d2 hybridization layout", b: "sp3d hybridization layout", c: "sp3 hybridization layout", d: "dsp2 hybridization layout", ans: "A" },
+                { q: "Which structural element among transition metal matrices exhibits the maximum number of potential variable oxidation states?", a: "Manganese (Mn)", b: "Chromium (Cr)", c: "Iron (Fe)", d: "Copper (Cu)", ans: "A" },
+                { q: "The rate constant equation tracking a first-order chemical reaction shows a baseline independence from which parameter?", a: "Initial starting concentration of reactants", b: "Systemic operating temperature configurations", c: "Activation energy threshold conditions", d: "Catalytic acceleration factor matrices", ans: "A" },
+                { q: "Which structural organic polymer composition is classified as a classic example of a thermosetting plastic network matrix?", a: "Bakelite structural compound", b: "Polyethylene packaging compound", c: "PVC compound layout", d: "Nylon-6,6 fiber layout", ans: "A" },
+                { q: "What baseline product outcome occurs when a primary alcohol molecule interacts with an acidic Potassium Dichromate oxidation solution?", a: "Carboxylic acid structural compounds", b: "Secondary ketone compound configurations", c: "Ether molecular chain blocks", d: "Alkyne gaseous products", ans: "A" },
+                { q: "The colloidal configuration tracking standard cosmetic face cream creams represents which classification type?", a: "Emulsion layout (liquid inside liquid)", b: "Sol layout (solid suspended in liquid)", c: "Gel layout (liquid locked inside solid)", d: "Foam layout (gas trapped inside liquid)", ans: "A" },
+                { q: "Which element among the options listed carries the absolute lowest initial ionization enthalpy rating?", a: "Cesium (Cs)", b: "Sodium (Na)", c: "Lithium (Li)", d: "Potassium (K)", ans: "A" },
+                { q: "The structural organic naming identity for the molecule structurally formatted as CH3-O-CH2-CH3 corresponds to:", a: "Methoxyethane nomenclature", b: "Ethoxyethane nomenclature", c: "Dimethyl ether nomenclature", d: "Propanone nomenclature", ans: "A" },
+                { q: "Which chemical thermodynamic state function change holds an absolute negative value during a completely spontaneous process at fixed metrics?", a: "Gibbs Free Energy change (ΔG)", b: "Systemic Entropy adjustment (ΔS)", c: "Enthalpy absorption factor (ΔH)", d: "Volumetric spatial configuration (ΔV)", ans: "A" },
+                { q: "The structural mineral profile representing the core operational composition of Bauxite ore matches which molecule?", a: "Al2O3 · 2H2O", b: "Fe2O3", c: "CuFeS2", d: "ZnCO3", ans: "A" },
+                { q: "Which law dictates that at constant temperature, the absolute solubility parameter of a gas inside a liquid relates directly to partial pressure?", a: "Henry's Law of gas solutions", b: "Raoult's Law of ideal mixtures", c: "Dalton's Law of partial conditions", d: "Gay-Lussac's volumetric rule matrix", ans: "A" },
+                { q: "The targeted organic reagent compound known as 'Lucan Reagent' utilizes which mixture composition to categorize alcohols?", a: "Anhydrous ZnCl2 concentrated with HCl", b: "Alkaline KMnO4 solution mix", c: "Bromine water dissolved inside CCl4", d: "Sodium metal suspended in anhydrous ether", ans: "A" },
+                { q: "What specific crystal lattice flaw configuration triggers a density reduction inside an absolute ionic solid crystal?", a: "Schottky defect pattern arrays", b: "Frenkel dislocation flaws", c: "Interstitially trapped atom inclusions", d: "Metal excess coloration modifications", ans: "A" },
+                { q: "Which element group among halogen structures possesses the highest electron gain enthalpy value profile?", a: "Chlorine (Cl)", b: "Fluorine (F)", c: "Bromine (Br)", d: "Iodine (I)", ans: "A" },
+                { q: "The physical behavior mapping known as the Tyndall Effect inside solution chemistries refers specifically to:", a: "The scattering of light beams by colloidal particles", b: "The random zigzag paths executed by suspended molecules", c: "The migration of charged fractions under electrical fields", d: "The precipitation of structural items via electrolytes", ans: "A" },
+                { q: "What exact volumetric spatial geometry defines the molecular configuration mapping of Ammonia (NH3)?", a: "Trigonal pyramidal geometry", b: "Perfect tetrahedral configuration", c: "Trigonal planar architecture", d: "Linear path geometry profile", ans: "A" },
+                { q: "The classical organic compound synthesis interaction known as the Williamson Synthesis route is used to manufacture:", a: "Asymmetrical and symmetrical ethers", b: "Long-chain aliphatic carboxylic acids", c: "Aromatic primary amine derivatives", d: "Substituted alpha-halogenated ketones", ans: "A" },
+                { q: "Which among the following listed carbohydrates satisfies the structural classification of a non-reducing sugar?", a: "Sucrose carbohydrate matrices", b: "Maltose molecular fractions", c: "Lactose structural fractions", d: "Glucose baseline monosaccharides", ans: "A" },
+                { q: "The standard structural definition explaining a conjugate acid-base pair under Bronsted-Lowry rules differs by exactly:", a: "One single proton fraction (H+)", b: "One isolated electron pair link", c: "One hydroxide ion parameter (OH-)", d: "An arbitrary absolute oxygen atom", ans: "A" },
+                { q: "Which transitional configuration layout series is historically referred to as the coinage metals group?", a: "Group 11 elements (Cu, Ag, Au)", b: "Group 12 elements (Zn, Cd, Hg)", c: "Group 10 elements (Ni, Pd, Pt)", d: "Group 7 elements (Mn, Tc, Re)", ans: "A" },
+                { q: "The operational mathematical constant linking the total rate of a reaction directly to the temperature factor specifies that every 10°C rise scales rates by:", a: "Two times multiplier scale", b: "Four times multiplier scale", c: "Ten times exponential jump", d: "Remains entirely uninfluenced", ans: "A" },
+                { q: "What molecular mass tracking parameter assumes importance when determining the structural freeze-point depression of a non-volatile solute?", a: "Molality concentration scales (m)", b: "Molarity volumetric scales (M)", c: "Normality valence parameters (N)", d: "Formal mass distribution scales (F)", ans: "A" }
             ],
             biology: [
-                { id:"B1", subject:"Biology", question_text:"Which double-membrane sub-cellular organelle serves as the exclusive site for oxidative phosphorylation?", option_a:"Granular Ribosome assembly", option_b:"Golgi macromolecular sorting system", option_c:"Mitochondria dynamic matrix", option_d:"Lysosome acidic enzymatic vesicle", correct_option:"C" },
-                { id:"B2", subject:"Biology", question_text:"Within the vascular routing loops of the human heart, which vessel drops deoxygenated blood into the right atrium?", option_a:"Pulmonary systemic vein line", option_b:"Descending systemic main aorta", option_c:"Pulmonary directional artery line", option_d:"Superior and Inferior Vena Cava lines", correct_option:"D" },
-                { id:"B3", subject:"Biology", question_text:"Which human endocrine hormone directly orchestrates systemic circadian biological clock rhythms?", option_a:"Pancreatic insulin loop", option_b:"Adrenal cortex cortisol axis", option_c:"Pineal gland melatonin release", option_d:"Thyroid thyroxine systemic speed regulator", correct_option:"C" },
-                { id:"B4", subject:"Biology", question_text:"The specialized structural tissue configuration forming the selective lining profile of human blood capillaries is:", option_a:"Simple squamous epithelium layout", option_b:"Stratified cuboidal safety barrier", option_c:"Pseudostratified ciliated respiratory deck", option_d:"Columnar sensory tissue lining", correct_option:"A" },
-                { id:"B5", subject:"Biology", question_text:"What type of functional genetic inheritance dynamic controls the standard ABO human blood grouping system classification?", option_a:"Incomplete structural blend dominance", option_b:"Multiple allelism combined with co-dominance mechanics", option_c:"Polygenic cumulative trait expression scale", option_d:"Sex-linked recessive inheritance pathway tracking", correct_option:"B" },
-                { id:"B6", subject:"Biology", question_text:"Which specific structural structural component forms the thick filament layer configuration of human skeletal sarcomeres?", option_a:"Actin strand assemblies", option_b:"Myosin fibrous bundles", option_c:"Troponin orientation nodes", option_d:"Tropomyosin structural rods", correct_option:"B" },
-                { id:"B7", subject:"Biology", question_text:"Where does the primary step of initial protein chemical breakdown happen inside the human gastrointestinal tract?", option_a:"Oral cavity salivary matrix", option_b:"Gastric lumen chamber via pepsin systems", option_c:"Duodenum mucosal brush border zones", option_d:"Large intestine absorption columns", correct_option:"B" },
-                { id:"B8", subject:"Biology", question_text:"The highly specialized botanical target sequence identifying the true site of water intake within root systems maps to:", option_a:"The root cap protective layer", option_b:"The zone of cellular elongation tracking", option_c:"The root hair maturation zone interface", option_d:"The apical meristem active zone", correct_option:"C" },
-                { id:"B9", subject:"Biology", question_text:"Which target biochemical agent functions as the primary direct electron donor platform during light reactions of photosynthesis?", option_a:"Carbon dioxide gas molecules", option_b:"Liquid water molecules split via photolysis", option_c:"Adenosine triphosphate vectors", option_d:"Ribulose bisphosphate binding substrates", correct_option:"B" },
-                { id:"B10", subject:"Biology", question_text:"What specialized structural connection zone allows direct signal relay between adjacent neurons via chemical neurotransmitter bursts?", option_a:"Axon sheath baseline line", option_b:"Synaptic cleft node interface", option_c:"Myelin insulating node layer", option_d:"Dendritic core matrix wall", correct_option:"B" },
-                ...Array.from({length: 30}, (_, i) => ({
-                    id: `B_EXT_${i+11}`,
-                    subject: "Biology",
-                    question_text: `[High-Yield Module Core practice item #${i+11}]. Which structural macromolecule class serves as the functional primary raw material substrate consumed during cellular glycolysis tracks?`,
-                    option_a: "Long-chain fatty acid groups", option_b: "Hexose monosaccharide glucose formations", option_c: "Polypeptide structural amino acids", option_d: "Nucleic ribose structural components",
-                    correct_option: "B"
-                }))
+                { q: "Which functional region within the structure of a mammalian juxtamedullary nephron holds the highest passive permeability to water?", a: "Descending limb of the loop of Henle", b: "Ascending thick sector segment of Henle", c: "Distal convoluted tubule channel network", d: "Cortical collection duct system perimeter", ans: "A" },
+                { q: "The definitive phenotypic configuration ratio tracking an F2 generation harvest resulting from a standard Mendelian dihybrid cross is:", a: "9:3:3:1 allocation profile", b: "1:2:1 baseline genetic scale", b: "3:1 morphological split scale", d: "9:7 epistatic feedback model", ans: "A" },
+                { q: "Which specific immunoprotein configuration class can pass through human placental barriers to provide passive protection to a fetus?", a: "IgG immunoglobulin class", b: "IgA secretory class structure", c: "IgM primary macromolecular array", d: "IgE allergic hypersensitivity vector", ans: "A" },
+                { q: "The operational process of initial translation targeting a messenger RNA string layout initiates exclusively at which triplet codon segment?", a: "AUG codon sequence (Methionine)", b: "UAA termination signal sequence", c: "UAG terminal stop configuration", d: "UGA dynamic sequence loop", ans: "A" },
+                { q: "Which human endocrine gland cell cluster synthesizes and releases insulin into local vascular channels?", a: "Beta cells located within the Islets of Langerhans", b: "Alpha cells of the pancreatic tissue loops", c: "Acinar exocrine synthesis cell walls", d: "Oxyntic mucosal cell boundaries", ans: "A" },
+                { q: "The structural connection path that directly links the human pituitary gland body to the superior control layout of the hypothalamus is the:", a: "Infundibulum vascular stalk architecture", b: "Corpus callosum bridge network", c: "Pons varolii tracking interface", d: "Filum terminale anchoring cord", ans: "A" },
+                { q: "What cranial nerve group controls the parasympathetic neurological configurations slowing down human heart rate parameters?", a: "Cranial Nerve X (Vagus Nerve)", b: "Cranial Nerve VII (Facial Nerve)", c: "Cranial Nerve V (Trigeminal Nerve)", d: "Cranial Nerve XII (Hypoglossal Nerve)", ans: "A" },
+                { q: "Which specialized anatomical node structure behaves as the intrinsic, primary electrical pacemaker of the human heart muscle tissue?", a: "Sinoatrial (SA) node tissue cluster", b: "Atrioventricular (AV) node junction tracking", c: "Bundle of His conduction network line", d: "Purkinje fiber terminal network branches", ans: "A" },
+                { q: "The biochemical execution sequence tracking the extraction of pyruvate from glucose assets without oxygen consumption is:", a: "Glycolysis pathway loop (EMP route)", b: "Krebs tricarboxylic acid cycle matrix", c: "Oxidative phosphorylation electron chain", d: "Glycogenolysis internal breakdown chain", ans: "A" },
+                { q: "Which component inside a standard human skeletal muscle sarcomere functions as the primary structural anchor for thin actin filaments?", a: "The Z-disc membrane boundary zone", b: "The M-line alignment vector zone", c: "The H-zone isolation partition", d: "The central thick anisotropic A-band", ans: "A" },
+                { q: "The physiological condition known as Erythroblastosis Fetalis can manifest when a pregnancy track pairs an:", a: "Rh-negative biological mother with an Rh-positive fetus", b: "Rh-positive biological mother with an Rh-negative fetus", c: "O-type mother with an AB-type gestating fetus", d: "A-type individual with a B-type partner combination", ans: "A" },
+                { q: "Which micro-cellular organelle contains high concentrations of hydrolytic enzymes operative exclusively under acidic pH rules?", a: "Lysosome cellular vesicles", b: "Peroxisome oxidative enzyme bodies", c: "Centrosome structural organization units", d: "Nucleolus sub-nuclear assemblies", ans: "A" },
+                { q: "The primary structural site responsible for the absorption of digested food nutrients inside the human GI tract is the:", a: "Villi of the small intestinal mucosa", b: "Gastric rugae folds of the stomach lining", c: "Haustra segments of the large intestine colon", d: "Esophageal stratified squamous passage", ans: "A" },
+                { q: "What specific double-stranded structural connection link unifies base configurations inside an isolated DNA molecule?", a: "Hydrogen bonds bridging targeted bases", b: "Phosphodiester backbone links exclusively", c: "Peptide connection groups across lines", d: "Glycosidic bond configurations", ans: "A" },
+                { q: "Which component among the choices listed serves as the definitive mechanical vector transmitting Malaria pathogens into human hosts?", a: "Female Anopheles mosquito species vectors", b: "Male Culex mosquito tracking systems", c: "Glossina tsetse vector delivery flies", d: "Pediculus human vector parasite profiles", ans: "A" },
+                { q: "The diagnostic identification configuration tracking human typhoid progression maps to which laboratory testing module?", a: "Widal serological agglutination test", b: "Western Blot macromolecular analysis verification", c: "ELISA sandwich tracking methodology", d: "Mantoux intradermal skin test index", ans: "A" },
+                { q: "Which human hormone acts as the principal driver forcing calcium relocation out of bone reservoirs and into circulating blood channels?", a: "Parathyroid Hormone (PTH)", b: "Calcitonin thyroid tracking hormone", c: "Aldosterone mineralocorticoid loops", d: "Glucagon hepatic pathway activator", ans: "A" },
+                { q: "The unique micro-anatomical cells within the human stomach wall that actively secrete hydrochloric acid and intrinsic factor are:", a: "Parietal (oxyntic) cells", b: "Chief (peptic) enzyme cells", c: "Goblet mucus production cells", d: "G-cells handling gastrin production", ans: "A" },
+                { q: "What baseline genetic classification status profiles standard human color blindness disorders?", a: "X-linked recessive chromosomal inheritance mutation", b: "Autosomal dominant phenotypic expression scale", c: "Y-linked genetic line restricted traits", d: "Mitochondrial maternal trace inheritance lines", ans: "A" },
+                { q: "The process profile tracking the maturation and morphological specialization of spermatids transforming into functional spermatozoa is:", a: "Spermiogenesis maturation pathways", b: "Spermatocytogenesis initial cell divisions", c: "Spermination exit release mechanisms", d: "Meiotic structural separation execution", ans: "A" },
+                { q: "Which specialized tissue type forms the structural operational composition of human intervertebral discs?", a: "Fibrocartilage connective tissue matrices", b: "Hyaline cartilage protective frameworks", c: "Elastic cartilage elastic ear assemblies", d: "Dense regular tendon band connections", ans: "A" },
+                { q: "The active biochemical molecule that serves as the terminal electron acceptor during aerobic cellular respiration tracks is:", a: "Elemental Oxygen gas (O2)", b: "Nicotinamide Adenine Dinucleotide (NAD+)", c: "Cytochrome C oxidase complex units", d: "Water vapor molecules (H2O)", ans: "A" },
+                { q: "Which pulmonary parameter volume remains locked inside human lung tissues even following a maximal forced exhalation maneuver?", a: "Residual Volume (RV)", b: "Tidal Volume (TV)", c: "Expiratory Reserve Volume (ERV)", d: "Vital Capacity index volume (VC)", ans: "A" },
+                { q: "The dynamic execution stage inside a cell cycle sequence where replication and duplication of nuclear DNA material happens is:", a: "S-phase (Synthesis Phase) interval", b: "G1-phase check configuration checkpoint", c: "G2-phase configuration scaling checkpoint", d: "Prophase morphological restructuring steps", ans: "A" }
             ],
             nursing_aptitude: [
-                { id:"N1", subject:"Nursing Aptitude", question_text:"What is the primary baseline clinical assessment tool used to record a patient's level of consciousness?", option_a:"Apgar neonatal metric matrix", option_b:"Glasgow Coma Scale score assessment protocols", option_c:"Braden skin health decay prevention mapping", option_d:"Visual Analogue Scale for pain evaluation", correct_option:"B" },
-                { id:"N2", subject:"Nursing Aptitude", question_text:"Which position should a nurse place a patient in who is suffering from severe acute respiratory distress?", option_a:"Fully horizontal prone position layout", option_b:"Elevated Fowler's semi-sitting layout alignment", option_c:"Flat supine alignment position", option_d:"Head-down tilted Trendelenburg structural vector", correct_option:"B" },
-                { id:"N3", subject:"Nursing Aptitude", question_text:"What is the medical term for a hospital-acquired infection that a patient develops during their stay?", option_a:"Idiopathic system layout variance", option_b:"Congenital birth condition vector", option_c:"Nosocomial healthcare-associated pathway", option_d:"Zoonotic cross-species transfer vector", correct_option:"C" },
-                { id:"N4", subject:"Nursing Aptitude", question_text:"What baseline target vector does the letter 'E' mean within standard behavioral acronyms tracing professional 'NURSE' qualities?", option_a:"Efficiency of execution parameters", option_b:"Emotional empathy response loops", option_c:"Educational pedigree metrics", option_d:"Examination compliance standards", correct_option:"A" },
-                { id:"N5", subject:"Nursing Aptitude", question_text:"The classical foundational baseline definition tracking nursing as 'the use of client environmental adjustments to foster natural self-recovery' belongs to:", option_a:"Dorothea Orem self-care tracking model", option_b:"Florence Nightingale environmental recovery theory", option_c:"Virginia Henderson independent execution scale", option_d:"Jean Watson care framework matrix", correct_option:"B" },
-                { id:"N6", subject:"Nursing Aptitude", question_text:"What constitutes the legal and professional operational core directive managed across the sovereign territory of India by the Indian Nursing Council (INC)?", option_a:"To dictate administrative operational pricing structures for health groups", option_b:"To govern, unify, and regulate professional educational standards for nursing", option_c:"To conduct operational training seminars for residency physicians", option_d:"To handle state-level malpractice litigation suits directly", correct_option:"B" },
-                { id:"N7", subject:"Nursing Aptitude", question_text:"What is the absolute immediate primary operational action priority for a clinical nurse encountering a major localized chemical flash fire inside a ward area?", option_a:"Attempt to extinguish the fire source utilizing local hand systems", option_b:"Safely extract and relocate endangered clients from immediate danger zone limits", option_c:"Activate the automated regional structural alarm grid systems", option_d:"Lock down central supply piping loops for high-pressure oxygen", correct_option:"B" },
-                { id:"N8", subject:"Nursing Aptitude", question_text:"Which dynamic is classified as an example of an open, clear breach matching the professional healthcare code of Client Confidentiality?", option_a:"Relaying specific data markers to direct medical members of the treatment team", option_b:"Debating personal diagnostic variables of an active client within public elevator areas", option_c:"Documenting precise clinical indicators inside secure computing servers", option_d:"Disclosing vital tracking data variables to designated legal guardians with clear authorization", correct_option:"B" },
-                { id:"N9", subject:"Nursing Aptitude", question_text:"What specific diagnostic observation indicator sequence reflects the development of a systemic anaphylactic hypersensitivity event?", option_a:"Steady drops in core internal body temperatures", option_b:"Acute hypotension combined with severe bronchospasm airway constriction", option_c:"Gradual increases in total output urinary track metrics", option_d:"Localized skin changes isolated to minor areas", correct_option:"B" },
-                { id:"N10", subject:"Nursing Aptitude", question_text:"The practice standard mapping known across global healthcare contexts as 'Universal Precautions' requires what baseline nurse behavior?", option_a:"Screening target diagnostic charts exclusively for specific historical infections", option_b:"Handling all human body fluid elements as potentially active infectious carriers", option_c:"Wearing complete sterile clothing elements for standard basic evaluations", option_d:"Restricting access limits for high-risk diagnostic sections exclusively", correct_option:"B" },
-                ...Array.from({length: 30}, (_, i) => ({
-                    id: `N_EXT_${i+11}`,
-                    subject: "Nursing Aptitude",
-                    question_text: `[High-Yield Module Core practice item #${i+11}]. What is the primary clinical reason for frequently changing the position of an immobile bedbound client every two hours?`,
-                    option_a: "To lower the overall work burden on local floor care team networks", option_b: "To prevent local tissue necrosis and the formation of pressure ulcers", option_c: "To accelerate metabolic rate parameters artificially", option_d: "To standardize dynamic charting data inputs across shifts",
-                    correct_option: "B"
-                }))
+                { q: "According to statutory biomedical waste management regulations in India, infected plastic surgical catheters and blood bags must go into which color container?", a: "Red color bin layout", b: "Yellow regulatory safety bin", c: "Blue puncture proof box frame", d: "Black municipal trash envelope", ans: "A" },
+                { q: "A nurse evaluates an adult client and notes complete unresponsiveness with absent respiration vectors. What is the standard compression-to-breath ratio for adult CPR?", a: "30 compressions paired with 2 rescue breaths", b: "15 compressions paired with 1 rescue breath", c: "5 compressions paired with 2 rescue breaths", d: "50 compressions paired with 5 rescue breaths", ans: "A" },
+                { q: "What is the historical baseline clinical definition explaining the philosophy of nursing designed by Florence Nightingale?", a: "The strategic utilization of candidate environmental setups to optimize recovery loops", b: "The execution of fully independent diagnostic actions omitting medical tracking", c: "The administrative optimization of institutional hospital economic budgets", d: "The execution of surgical interventions across trauma cases", ans: "A" },
+                { q: "Which baseline clinical assessment metric parameter serves as the primary evaluation guide tracked across the Glasgow Coma Scale (GCS)?", a: "Neurological level of consciousness index", b: "Neonatal physical health APGAR survival scaling", c: "Skin integrity breakdown risk metrics via Braden sheets", d: "Total body surface percentage tracking for burn metrics", ans: "A" },
+                { q: "What specific body posture alignment profile must a floor nurse implement for a client suffering from acute, severe dyspnea?", a: "High Fowler's sitting position layout", b: "Fully horizontal flat prone configuration", c: "Supine positioning with elevation of limbs", d: "Trendelenburg head-down tilt configuration", ans: "A" },
+                { q: "The legal operational entity empowered to govern and standardize professional education profiles for nursing assets across India is the:", a: "Indian Nursing Council (INC)", b: "National Medical Commission (NMC)", c: "World Health Organization (WHO) regional desks", d: "State Medical Faculty Examination branch", ans: "A" },
+                { q: "What immediate operational safety baseline takes definitive precedence when a floor nurse detects a fire breakout inside a care ward partition?", a: "Rescue and move any clients out of immediate environment danger zones", b: "Locate handheld chemical suppression canisters to target flame points", c: "Activate manual pull stations to alert the institutional grid framework", d: "Isolate central high-pressure pipeline feeds dealing with oxygen gas", ans: "A" },
+                { q: "Which operational dynamic is classified as a clear infraction violating the professional ethical code of Client Confidentiality?", a: "Debating candidate chart files inside public visitor elevator cars", b: "Sharing specific tracking details with direct members of the primary care team", c: "Logging assessment data loops inside password-protected server nodes", d: "Disclosing crucial legal alerts to verified next-of-kin with signed authorization", ans: "A" },
+                { q: "What baseline diagnostic tracking parameter indicates that a patient is developing an systemic anaphylactic shock sequence?", a: "Acute drop in blood pressure paired with severe bronchospasm airway tracking", b: "Steady increases in temperature coordinates combined with bradycardia", c: "Gradual acceleration loops in total output urinary fluid metrics", d: "Isolated dermatological changes confined to small physical zones", ans: "A" },
+                { q: "The clinical practice directive known across modern healthcare organizations as 'Universal Precautions' mandates that a nurse must:", a: "Treat all human body fluid elements as potentially active infectious carriers", b: "Isolate and screen baseline records exclusively for explicit historic diseases", c: "Don complete sterile operative clothing sets for routine basic checks", d: "Restrict building authorization access paths for general patient wards", ans: "A" },
+                { q: "What is the primary clinical driver forcing the mandatory rotation of an immobile, bedbound patient's physical position every two hours?", a: "To prevent local tissue ischemia and the formation of pressure ulcers", b: "To minimize the aggregate floor tracking workload of the nursing roster", c: "To stimulate standard metabolic rate metrics artificially across tissues", d: "To maintain uniform formatting structures inside chart records", ans: "A" },
+                { q: "A patient accidentally ingests an unknown toxic chemical compound. What is the absolute first action step the triage nurse executes?", a: "Assess the patient's airway, breathing parameters, and circulatory status", b: "Administer high volumes of liquid water to dilute stomach acids", c: "Force gastric emptying by initiating mechanical vomiting responses", d: "Locate specific chemical antidote items from storage bays", ans: "A" },
+                { q: "What specific baseline metric is evaluated across clinical groups when calculating a patient's 'Pulse Pressure' value?", a: "The difference separating Systolic and Diastolic blood pressure measurements", b: "The aggregate mean average of total arterial pressure configurations", c: "The variance separating radial and apical pulse tracking frequencies", d: "The peak pressure tracked inside the pulmonary artery boundaries", ans: "A" },
+                { q: "Which baseline vector among the choices listed defines the concept of 'Malpractice' within professional nursing jurisprudence frameworks?", a: "Intentional or negligent deviations from accepted care standards causing client harm", b: "An accidental clerical spelling mistake completed on a non-critical sheet", c: "Declining to pick up supplementary shifts outside contracted schedule limits", d: "Relaying institutional policy alerts directly down to junior nurse tiers", ans: "A" },
+                { q: "What clinical indicator is categorized as an objective 'Sign' rather than a subjective 'Symptom' during a physical assessment?", a: "A measured core body temperature value of 39°C via thermometer", b: "A candidate's personal description of localized abdominal discomfort", c: "A client's self-reported sensation of dizziness during position changes", d: "A patient's expression of moderate generalized fatigue parameters", ans: "A" },
+                { q: "The medical abbreviation 'NPO' written inside a client's specific clinical instruction chart translates to:", a: "Nothing by mouth (Nulla per os parameters)", b: "Administer medications exclusively during nighttime hours", c: "Patient requires immediate isolation precautions", d: "New patient orientation checklist execution required", ans: "A" },
+                { q: "What is the primary operational objective behind placing a surgical candidate on a restriction timeline before an elective general anesthesia procedure?", a: "To minimize the danger of pulmonary aspiration of stomach contents", b: "To accelerate the postoperative processing timeline of the sedative agents", c: "To manage systemic fluid weight parameters down prior to incisional lines", d: "To limit structural variations in baseline metabolic heat indexes", ans: "A" },
+                { q: "The primary behavioral attribute summarized under the term 'Empathy' inside professional nurse-client relationships implies:", a: "Understanding the patient's internal emotional frame without adopting their feelings", b: "Adopting the exact emotional distress state of the client completely", c: "Offering generic reassurances to bypass complex interpersonal conversations", d: "Handling medical charting tasks with absolute velocity metrics", ans: "A" },
+                { q: "What standard size gauge size color notation tags the peripheral intravenous cannula used for rapid fluid resuscitation across adult trauma cases?", a: "Green coloration (18 Gauge configuration)", b: "Blue coloration (22 Gauge configuration)", c: "Pink coloration (20 Gauge configuration)", d: "Yellow coloration (24 Gauge configuration)", ans: "A" },
+                { q: "The core foundational milestone established historically under the professional legacy of nursing icon Clara Barton is the development of the:", a: "American Red Cross Organization", b: "First clinical operational charting manual guidelines", c: "Foundational baseline pediatric vaccination schedule layout", d: "International Council of Nurses legal board framework", ans: "A" },
+                { q: "What specific tracking route provides the absolute fastest systemic absorption profile for a administered therapeutic drug asset?", a: "Intravenous (IV) direct injection pathway", b: "Subcutaneous (SC) tissue deposit routing", c: "Intramuscular (IM) deep tissue matrix routing", d: "Oral ingestion gastrointestinal absorption lines", ans: "A" },
+                { q: "A nurse tracks a client's baseline respiration behavior and calculates a breathing frequency of 8 cycles per minute. This scenario is documented as:", a: "Bradypnea breathing deceleration", b: "Tachypnea acceleration tracking", c: "Eupnea standard baseline tracking", d: "Apnea cessation configuration", ans: "A" },
+                { q: "What is the principal clinical indicator monitored to screen for the initial development of thrombophlebitis across a localized IV access insertion site?", a: "Erythema, localized warmth, and tenderness along the course of the vein", b: "Coolness of the surrounding dermal tissue paired with blanched color tones", c: "Spontaneous arterial blood backflow leaking into the clear hub tubing line", d: "Complete absence of resistance patterns when flashing saline flushes", ans: "A" },
+                { q: "The professional validation practice known as 'Triage' inside emergency department sectors involves:", a: "Categorizing patients sequentially based on the urgent severity of their medical needs", b: "Processing financial insurance premium accounts ahead of medical interventions", c: "Executing comprehensive verification routines to check historical records", d: "Distributing routine pharmaceutical prescriptions to outgoing client groups", ans: "A" }
             ],
             english: [
-                { id:"E1", subject:"English", question_text:"Identify the correct synonym for the word 'AMELIORATE':", option_a:"To make worse", option_b:"To improve or make better", option_c:"To destroy completely", option_d:"To delay intentionally", correct_option:"B" },
-                { id:"E2", subject:"English", question_text:"Choose the option that fills the blank correctly: 'Neither the principal nor the teachers ________ present at the clinical event.'", option_a:"was", option_b:"were", option_c:"is", option_d:"has been", correct_option:"B" },
-                { id:"E3", subject:"English", question_text:"Identify the misspelled word from the options below:", option_a:"Occurrence", option_b:"Maintenance", option_c:"Gauge", option_d:"Accomodate", correct_option:"D" },
-                { id:"E4", subject:"English", question_text:"Select the appropriate preposition sequence to close out the statement: 'The head researcher was highly confident ________ the success of the new hospital system.'", option_a:"about", option_b:"of", option_c:"in", option_d:"for", correct_option:"C" },
-                { id:"E5", subject:"English", question_text:"Identify the proper alternative meaning identifying the core underlying message of the popular idiomatic phrase: 'To burn the midnight oil'", option_a:"To waste precious natural resources recklessly", option_b:"To work or study late into the hours of the night", option_c:"To instigate internal workplace conflicts or arguments", option_d:"To manage complex financial operations incorrectly", correct_option:"B" },
-                { id:"E6", subject:"English", question_text:"Convert the active voice line statement into its appropriate Passive Voice variation sequence: 'The clinical team successfully performed the operation.'", option_a:"The operation has been successfully performed by the clinical team.", option_b:"The operation was successfully performed by the clinical team.", option_c:"The operation is being successfully performed by the clinical team.", option_d:"The operation successfully performed the clinical team.", correct_option:"B" },
-                { id:"E7", subject:"English", question_text:"Choose the grammatically accurate option that fixes the underlining syntax flaw: 'The patient has been waiting here since three hours.'", option_a:"The patient was waiting here since three hours.", option_b:"The patient has been waiting here for three hours.", option_c:"The patient is waiting here from three hours.", option_d:"The patient had waited here inside three hours.", correct_option:"B" },
-                { id:"E8", subject:"English", question_text:"Identify the accurate antonym representing the direct structural converse of the vocabulary item: 'EPHEMERAL'", option_a:"Transient or fleeting", option_b:"Perpetual or permanent", option_c:"Weak or fragile", option_d:"Mysterious or hidden", correct_option:"B" },
-                { id:"E9", subject:"English", question_text:"Find the proper word substitution choice that cleanly maps to the definitive descriptive concept: 'A person who looks at the bright side of things'", option_a:"Pessimist identity", option_b:"Optimist identity", option_c:"Misanthrope identity", option_d:"Altruist identity", correct_option:"B" },
-                { id:"E10", subject:"English", question_text:"Select the best word combination to fill out the sentence context link: 'The new nurse was praised for her ________ diligence and exceptional care.'", option_a:"negligent", option_b:"assiduous", option_c:"apathetic", option_d:"perfunctory", correct_option:"B" },
-                ...Array.from({length: 30}, (_, i) => ({
-                    id: `E_EXT_${i+11}`,
-                    subject: "English",
-                    question_text: `[High-Yield Module Core practice item #${i+11}]. Choose the option that provides the correct grammatical correction for the blank spacing: 'If she ________ hard, she would have passed the entry text.'`,
-                    option_a: "works", option_b: "had worked", option_c: "has worked", option_d: "would work",
-                    correct_option: "B"
-                }))
+                { q: "Identify the alternative option that correctly locates the syntax or grammatical structure error within the provided text block: 'The panel of medical specialists have concluded that the patient requires immediate intervention.'", a: "The panel of", b: "medical specialists have", c: "concluded that", d: "requires immediate", ans: "B" },
+                { q: "Select the vocabulary option that accurately serves as a semantic synonym representing the definition of the word 'AMELIORATE':", a: "To worsen or compound issues", b: "To improve or make better", c: "To dissolve structural links", d: "To intentionally defer action", ans: "B" },
+                { q: "Identify the option text block containing an incorrect spelling format among the standard English vocabulary listings:", a: "Occurrence", b: "Maintenance", c: "Gauge", d: "Accomodate", ans: "D" },
+                { q: "Fill the empty segment block with the proper preposition selection: 'The nursing supervisor was highly confident ________ the clinical team's readiness.'", a: "about", b: "of", c: "in", d: "for", ans: "C" },
+                { q: "What constitutes the true underlying figurative meaning represented by the popular English idiom: 'To burn the midnight oil'?", a: "To work or study late into the hours of the night", b: "To mismanage financial capital assets recklessly", c: "To create unnecessary structural delays across workflows", d: "To perform routine duties with minimal interest levels", ans: "A" },
+                { q: "Convert the following active sentence into its proper grammatical Passive Voice transformation: 'The medical team completed the research.'", a: "The research was completed by the medical team.", b: "The research has been completed by the medical team.", c: "The research is being completed by the medical team.", d: "The completion of research was done by the team.", ans: "A" },
+                { q: "Choose the option that represents the best grammatical correction for the statement: 'The patient is resting in the room since three hours.'", a: "The patient was resting in the room since three hours.", b: "The patient has been resting in the room for three hours.", c: "The patient is resting in the room from three hours.", d: "The patient had rested inside the room within three hours.", ans: "B" },
+                { q: "Identify the vocabulary alternative that stands as the direct antonym converse of the target word: 'EPHEMERAL'", a: "Transient and short-lived", b: "Perpetual and long-lasting", c: "Fragile and delicate", d: "Obscure and hard to find", ans: "B" },
+                { q: "Find the single-word substitute that matches the descriptive sentence: 'A person who demonstrates altruistic dedication to human welfare causes'", a: "Philanthropist identity", b: "Misanthrope identity", c: "Egotist identity", d: "Sceptic identity", ans: "A" },
+                { q: "Select the best word match to complete the statement context: 'The candidate's response was ________, leaving no room for tracking ambiguities.'", a: "equivocal", b: "lucid", c: "verbose", d: "ambiguous", ans: "B" },
+                { q: "Identify the option that provides the correct punctuation layout matching academic sentence structure frameworks:", a: "The doctor said, 'The chart needs immediate verification.'", b: "The doctor said 'The chart needs immediate verification'.", c: "The doctor, said 'the chart needs immediate verification.'", d: "The doctor said, 'the chart needs immediate verification'.", ans: "A" },
+                { q: "Choose the proper word option to fill the gap correctly: 'The number of applicants registering for the 2026 entry exam ________ increased significantly.'", a: "has", b: "have", c: "were", d: "are", ans: "A" },
+                { q: "Identify the word option that functions as an accurate structural antonym for the vocabulary item: 'BENEVOLENT'", a: "Malevolent", b: "Kindhearted", c: "Magnanimous", d: "Altruistic", ans: "A" },
+                { q: "Fill the blank with the appropriate conditional verb tense structure: 'If the emergency team ________ sooner, the outcome would have been optimized.'", a: "arrives", b: "had arrived", c: "has arrived", d: "would arrive", ans: "B" },
+                { q: "Choose the word substitution match for the definition phrase: 'The study of the historical origin and structural derivation profiles of words'", a: "Etymology", b: "Entomology", c: "Pathology", d: "Phonology", ans: "A" },
+                { q: "Identify the grammatically correct option statement tracking subject-verb agreement rules cleanly:", a: "Every nurse and doctor is required to attend the clinical safety seminar.", b: "Every nurse and doctor are required to attend the clinical safety seminar.", c: "Every nurse and doctor were required to attend the clinical safety seminar.", d: "Every nurse and doctor have been required to attend the seminar.", ans: "A" },
+                { q: "Select the word combination that correctly fills the space: 'The head nurse's instructions were too ________ to be questioned by the residency staff.'", a: "peremptory", b: "docile", c: "ambiguous", d: "lenient", ans: "A" },
+                { q: "What figurative description tracks the message of the idiomatic phrase: 'A blessing in disguise'?", a: "A misfortune that eventually results in a positive outcome", b: "An apparent advantage that turns out to cause structural losses", c: "A hidden gift package delivered by an anonymous source", d: "An event that occurs with no predictable pattern indicators", ans: "A" },
+                { q: "Spot the target option text containing a spelling configuration flaw inside its structural layout profile:", a: "Inconveniencing", b: "Pronunciation", c: "Superintendent", d: "Irresistable", ans: "D" },
+                { q: "Choose the alternative option that successfully fills out the empty block space: 'She was so deeply absorbed ________ her diagnostic validation logs that she missed the announcement.'", a: "in", b: "at", c: "with", d: "for", ans: "A" },
+                { q: "Identify the option that correctly converts the provided line into indirect speech: 'The nurse said, I will check your vitals now.'", a: "The nurse said that she would check my vitals then.", b: "The nurse said that I will check your vitals now.", c: "The nurse told that she will check my vitals then.", d: "The nurse requested that she would check my vitals now.", ans: "A" },
+                { q: "Select the best vocabulary fit to close out the empty spacing: 'The candidate was noted for her ________ presentation skills, which charmed the screening panel.'", a: "eloquent", b: "inarticulate", c: "reticent", d: "laconic", ans: "A" },
+                { q: "Find the appropriate alternative option meaning that matches the vocabulary word: 'METICULOUS'", a: "Extremely careful and precise regarding small details", b: "Demonstrating a highly aggressive and unpredictable approach", c: "Lacking structural interest parameters or personal motivations", d: "Moving with maximum velocity targets across spatial metrics", ans: "A" },
+                { q: "Complete the text pattern using the correct modifier choice matching syntax rules: 'The laboratory technician executed the compound test sequence ________ than his peers.'", a: "more accurately", b: "most accurate", c: "accurate", d: "more accurate", ans: "A" }
             ]
         };
 
-        // RUNTIME STATE CONTROL HOOKS
-        let applicantIdentity = "";
-        let masterActiveTestSet = [];
+        // RUNTIME COMPILER VARIABLE MATRIX
+        let testQuestionsSet = [];
         let cursorIndex = 0;
-        let registeredChoices = {}; // Form: { index_integer: 'A'|'B'|'C'|'D' }
-        let temporalCounter = 140 * 60; // 140 minutes in seconds
-        let processTimerReference = null;
+        let localUserAnswers = {}; 
+        let internalSecondsLeft = 140 * 60; // 140 minutes matching CNET limits
+        let liveTimerIntervalRef = null;
+        let studentIdentityStr = "";
 
-        // SECTOR BLUEPRINTS
-        const segmentNames = ['physics', 'chemistry', 'biology', 'nursing_aptitude', 'english'];
+        const dynamicSubjectKeys = ['physics', 'chemistry', 'biology', 'nursing_aptitude', 'english'];
 
         /**
-         * INITIALIZATION PIPELINE
-         * Coordinates database sampling, screen loading, and structural rendering routines.
+         * INITIALIZATION CONTROLLER
+         * Isolates exact subject targets, randomizes internal array sequences, and renders screens.
          */
-        function initializeTestPipeline() {
-            const rawInputName = document.getElementById("candidate-name-field").value.trim();
-            if (!rawInputName) {
-                alert("Candidate Name is a mandatory field to open a secure test layout.");
+        function launchSecureTestingEnvironment() {
+            const nameFieldInput = document.getElementById("examinee-identity-field").value.trim();
+            if(!nameFieldInput) {
+                alert("Validation Exception: Candidate registration requires a valid name input string.");
                 return;
             }
 
-            applicantIdentity = rawInputName;
-            masterActiveTestSet = compileRandomizedSyllabusPackage();
+            studentIdentityStr = nameFieldInput;
+            testQuestionsSet = compileBalancedRandomExamPaper();
 
-            // Toggle interface screen blocks
-            document.getElementById("registration-view").classList.add("hidden");
-            document.getElementById("testing-environment-view").classList.remove("hidden");
-            document.getElementById("runtime-examinee-name").innerText = applicantIdentity;
+            // Toggle interface presentation views
+            document.getElementById("registration-gateway").classList.add("hidden");
+            document.getElementById("testing-workspace").classList.remove("hidden");
+            document.getElementById("runtime-candidate-name").innerText = studentIdentityStr;
 
-            assembleInteractiveMatrixBoard();
-            assembleSubjectJumpControls();
+            generateNavigatorMatrixNodes();
             renderActiveQuestionState();
-            triggerChronometerLoop();
+            startChronometerIntervalLoop();
         }
 
         /**
-         * SECURE EXAM RANDOMIZER ALGORITHM
+         * SECURE POOL COMPILER SUB-ROUTINE
          * Selects exactly 24 unique questions per subject to assemble the 120-question layout.
          */
-        function compileRandomizedSyllabusPackage() {
-            let packagedPaper = [];
+        function compileBalancedRandomExamPaper() {
+            let combinedPaperArray = [];
 
-            segmentNames.forEach(moduleKey => {
-                let availablePool = fullDatabaseRepository[moduleKey];
+            dynamicSubjectKeys.forEach(subjectKey => {
+                let primarySourceArray = embeddedMasterDatabase[subjectKey];
                 
-                // Alert tracking safeguards for your production data loads
-                if (!availablePool || availablePool.length < 24) {
-                    console.error(`Syllabus Alert: Category database target [${moduleKey}] contains fewer than 24 seeded entries.`);
-                }
+                // Shuffle current internal subject list using a math sorting array index offset algorithm
+                let randomizedSubjectPool = [...primarySourceArray].sort(() => Math.random() - 0.5);
+                
+                // Extract exactly 24 unique question items mapping to current category line
+                let curatedSubset = randomizedSubjectPool.slice(0, 24);
+                
+                // Append subject classifications to each data entity loop instance
+                curatedSubset.forEach(item => {
+                    item.subjectCategoryString = subjectKey.replace('_', ' ');
+                });
 
-                // Fisher-Yates variant inline array random shuffle loop
-                let randomList = [...availablePool].sort(() => Math.random() - 0.5);
-                let targetedSelection = randomList.slice(0, 24);
-
-                packagedPaper = packagedPaper.concat(targetedSelection);
+                combinedPaperArray = combinedPaperArray.concat(curatedSubset);
             });
 
-            // Scramble combined paper layout so matching questions distribute unpredictably across boundaries
-            return packagedPaper.sort(() => Math.random() - 0.5);
+            // Final total exam array balance mix scramble loop
+            return combinedPaperArray.sort(() => Math.random() - 0.5);
+        }
+
+        function generateNavigatorMatrixNodes() {
+            const scrollContainerDOM = document.getElementById("matrix-horizontal-strip");
+            scrollContainerDOM.innerHTML = ""; // Clear legacy nodes
+
+            testQuestionsSet.forEach((_, nodeIndexOffset) => {
+                const stepNodeBtn = document.createElement("button");
+                stepNodeBtn.id = `navigator-pill-cell-${nodeIndexOffset}`;
+                stepNodeBtn.innerText = nodeIndexOffset + 1;
+                stepNodeBtn.className = "flex-shrink-0 w-10 h-10 rounded-xl font-mono text-xs font-bold border transition bg-slate-50 text-slate-400 border-slate-200 flex items-center justify-center";
+                stepNodeBtn.onclick = () => skipToTargetedExamIndex(nodeIndexOffset);
+                scrollContainerDOM.appendChild(stepNodeBtn);
+            });
         }
 
         /**
-         * RENDER PIPELINE MANAGER
-         * Syncs visual layouts, updates highlighting state machines, and tracks completion.
+         * UI RE-RENDER SUB-ROUTINE
+         * Updates layout text fields and synchronizes active choice highlighting states.
          */
         function renderActiveQuestionState() {
-            const questionData = masterActiveTestSet[cursorIndex];
+            const activeQuestionItem = testQuestionsSet[cursorIndex];
 
-            // Render text string targets
-            document.getElementById("subject-category-badge").innerText = questionData.subject.replace('_', ' ');
-            document.getElementById("item-meta-counter").innerText = `Question ${cursorIndex + 1} of 120`;
-            document.getElementById("item-question-prose").innerText = questionData.question_text;
+            // Render text string payload nodes
+            document.getElementById("active-subject-tag").innerText = activeQuestionItem.subjectCategoryString;
+            document.getElementById("item-counter").innerText = `Question ${cursorIndex + 1} of 120`;
+            document.getElementById("item-prose").innerText = activeQuestionItem.q;
             
-            document.getElementById("option-label-text-A").innerText = questionData.option_a;
-            document.getElementById("option-label-text-B").innerText = questionData.option_b;
-            document.getElementById("option-label-text-C").innerText = questionData.option_c;
-            document.getElementById("option-label-text-D").innerText = questionData.option_d;
+            document.getElementById("text-node-A").innerText = activeQuestionItem.a;
+            document.getElementById("text-node-B").innerText = activeQuestionItem.b;
+            document.getElementById("text-node-C").innerText = activeQuestionItem.c;
+            document.getElementById("text-node-D").innerText = activeQuestionItem.d;
 
-            clearVisualSelectionHighlights();
+            resetVisualOptionButtonClasses();
             
-            const activeChoice = registeredChoices[cursorIndex];
-            if (activeChoice) {
-                applyNodeHighlightStyles(activeChoice);
-                document.getElementById("item-status-pill").innerText = "Saved";
-                document.getElementById("item-status-pill").className = "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide";
+            const historicallySavedChoice = localUserAnswers[cursorIndex];
+            if(historicallySavedChoice) {
+                applySelectionHighlightStyles(historicallySavedChoice);
+                document.getElementById("item-status-badge").innerText = "Saved";
+                document.getElementById("item-status-badge").className = "text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase tracking-wide";
             } else {
-                document.getElementById("item-status-pill").innerText = "Unanswered";
-                document.getElementById("item-status-pill").className = "text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 uppercase tracking-wide";
+                document.getElementById("item-status-badge").innerText = "Unsaved";
+                document.getElementById("item-status-badge").className = "text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase tracking-wide";
             }
 
-            // Button flow logic state handling
-            document.getElementById("ctrl-prev-btn").disabled = (cursorIndex === 0);
-            if (cursorIndex === masterActiveTestSet.length - 1) {
-                document.getElementById("ctrl-next-btn").classAlpha = "hidden"; // design fallback marker
-                document.getElementById("ctrl-next-btn").classList.add("hidden");
-                document.getElementById("ctrl-finalize-btn").classList.remove("hidden");
+            // Sync navigation bounds indicators
+            document.getElementById("nav-prev").disabled = (cursorIndex === 0);
+            if(cursorIndex === testQuestionsSet.length - 1) {
+                document.getElementById("nav-next").classList.add("hidden");
+                document.getElementById("nav-submit").classList.remove("hidden");
             } else {
-                document.getElementById("ctrl-next-btn").classList.remove("hidden");
-                document.getElementById("ctrl-finalize-btn").classList.add("hidden");
+                document.getElementById("nav-next").classList.remove("hidden");
+                document.getElementById("nav-submit").classList.add("hidden");
             }
 
-            synchronizeMatrixViewCells();
+            synchronizeNavigatorMatrixPillStyles();
             calculateRealTimeProgressMetrics();
         }
 
-        function clearVisualSelectionHighlights() {
-            ['A', 'B', 'C', 'D'].forEach(optCode => {
-                document.getElementById(`option-node-${optCode}`).className = "option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-slate-200 hover:bg-slate-50 text-slate-700 group";
-                document.getElementById(`option-indicator-${optCode}`).className = "w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-slate-100 text-slate-400 group-hover:bg-slate-200 transition";
+        function resetVisualOptionButtonClasses() {
+            ['A', 'B', 'C', 'D'].forEach(letterCode => {
+                document.getElementById(`btn-node-${letterCode}`).className = "option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-slate-200 text-slate-700 active:bg-slate-50";
+                document.getElementById(`badge-node-${letterCode}`).className = "w-6 h-6 flex items-center justify-center rounded bg-slate-100 font-mono text-xs text-slate-400 font-black";
             });
         }
 
-        function commitUserChoice(letterCode) {
-            registeredChoices[cursorIndex] = letterCode;
-            clearVisualSelectionHighlights();
-            applyNodeHighlightStyles(letterCode);
-            document.getElementById("item-status-pill").innerText = "Saved";
-            document.getElementById("item-status-pill").className = "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 uppercase tracking-wide";
-            synchronizeMatrixViewCells();
+        function registerSelection(choiceLetterId) {
+            localUserAnswers[cursorIndex] = choiceLetterId;
+            resetVisualOptionButtonClasses();
+            applySelectionHighlightStyles(choiceLetterId);
+            document.getElementById("item-status-badge").innerText = "Saved";
+            document.getElementById("item-status-badge").className = "text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 uppercase tracking-wide";
+            synchronizeNavigatorMatrixPillStyles();
             calculateRealTimeProgressMetrics();
         }
 
-        function applyNodeHighlightStyles(letterCode) {
-            document.getElementById(`option-node-${letterCode}`).className = "option-selection-node w-full text-left px-5 py-4 rounded-xl border text-sm sm:text-base font-semibold transition flex items-center gap-4 border-blue-600 bg-blue-50 text-blue-900 shadow-sm ring-1 ring-blue-500/20";
-            document.getElementById(`option-indicator-${letterCode}`).className = "w-8 h-8 flex items-center justify-center rounded-lg font-mono text-xs font-black bg-blue-600 text-white shadow-sm shadow-blue-200";
+        function applySelectionHighlightStyles(choiceLetterId) {
+            document.getElementById(`btn-node-${choiceLetterId}`).className = "option-node w-full text-left px-4 py-3.5 rounded-xl border text-sm font-semibold transition flex items-center gap-3 border-blue-600 bg-blue-50 text-blue-900 ring-1 ring-blue-500/10 font-bold";
+            document.getElementById(`badge-node-${choiceLetterId}`).className = "w-6 h-6 flex items-center justify-center rounded bg-blue-600 font-mono text-xs text-white font-black shadow-sm shadow-blue-100";
         }
 
-        function clearActiveChoice() {
-            if(registeredChoices[cursorIndex] !== undefined) {
-                delete registeredChoices[cursorIndex];
-                clearVisualSelectionHighlights();
-                document.getElementById("item-status-pill").innerText = "Unanswered";
-                document.getElementById("item-status-pill").className = "text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 uppercase tracking-wide";
-                synchronizeMatrixViewCells();
+        function clearResponse() {
+            if(localUserAnswers[cursorIndex] !== undefined) {
+                delete localUserAnswers[cursorIndex];
+                resetVisualOptionButtonClasses();
+                document.getElementById("item-status-badge").innerText = "Unsaved";
+                document.getElementById("item-status-badge").className = "text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase tracking-wide";
+                synchronizeNavigatorMatrixPillStyles();
                 calculateRealTimeProgressMetrics();
             }
         }
 
-        /**
-         * MATRIX GENERATOR SUB-ROUTINE
-         * Renders the grid block visualization representing the 120 items.
-         */
-        function assembleInteractiveMatrixBoard() {
-            const targetContainer = document.getElementById("matrix-scroll-deck");
-            targetContainer.innerHTML = ""; // reset template fallback markers
+        function synchronizeNavigatorMatrixPillStyles() {
+            testQuestionsSet.forEach((_, cellIndex) => {
+                const cellElementNode = document.getElementById(`navigator-pill-cell-${cellIndex}`);
+                if(!cellElementNode) return;
 
-            masterActiveTestSet.forEach((_, elementIdx) => {
-                const matrixButton = document.createElement("button");
-                matrixButton.id = `matrix-index-node-${elementIdx}`;
-                matrixButton.innerText = elementIdx + 1;
-                matrixButton.className = "h-10 rounded-xl font-mono text-xs font-bold border transition bg-slate-50 text-slate-400 border-slate-200 hover:bg-slate-100 shadow-sm";
-                matrixButton.onclick = () => jumpToSpecificExamIndex(elementIdx);
-                targetContainer.appendChild(matrixButton);
-            });
-        }
-
-        function assembleSubjectJumpControls() {
-            const container = document.getElementById("subject-jump-deck");
-            container.innerHTML = "";
-
-            const labelsMap = { "Physics":"PHY", "Chemistry":"CHE", "Biology":"BIO", "Nursing Aptitude":"APT", "English":"ENG" };
-            const uniqueOrder = [];
-            
-            masterActiveTestSet.forEach(item => {
-                if(!uniqueOrder.includes(item.subject)) uniqueOrder.push(item.subject);
-            });
-
-            uniqueOrder.forEach(subj => {
-                const badge = document.createElement("button");
-                badge.innerText = labelsMap[subj] || subj;
-                badge.title = `Jump directly to the first encountered ${subj} question.`;
-                badge.className = "px-3 py-1.5 bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-700 rounded-lg text-xs font-extrabold transition border border-slate-200 uppercase tracking-wider";
-                badge.onclick = () => jumpToFirstSubjectOccurrence(subj);
-                container.appendChild(badge);
-            });
-        }
-
-        function jumpToFirstSubjectOccurrence(subjectKey) {
-            const targetedIndex = masterActiveTestSet.findIndex(q => q.subject === subjectKey);
-            if(targetedIndex !== -1) {
-                jumpToSpecificExamIndex(targetedIndex);
-            }
-        }
-
-        function synchronizeMatrixViewCells() {
-            masterActiveTestSet.forEach((_, checkIdx) => {
-                const nodeElement = document.getElementById(`matrix-index-node-${checkIdx}`);
-                if (!nodeElement) return;
-
-                if (checkIdx === cursorIndex) {
-                    nodeElement.className = "h-10 rounded-xl font-mono text-xs font-black transition bg-blue-600 text-white ring-4 ring-blue-100 border-transparent shadow-md";
-                } else if (registeredChoices[checkIdx] !== undefined) {
-                    nodeElement.className = "h-10 rounded-xl font-mono text-xs font-extrabold transition bg-emerald-500 text-white border-transparent shadow-sm";
+                if(cellIndex === cursorIndex) {
+                    cellElementNode.className = "flex-shrink-0 w-10 h-10 rounded-xl font-mono text-xs font-black transition bg-blue-600 text-white ring-4 ring-blue-100 border-transparent shadow-sm";
+                } else if(localUserAnswers[cellIndex] !== undefined) {
+                    cellElementNode.className = "flex-shrink-0 w-10 h-10 rounded-xl font-mono text-xs font-extrabold transition bg-emerald-500 text-white border-transparent";
                 } else {
-                    nodeElement.className = "h-10 rounded-xl font-mono text-xs font-bold border transition bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100";
+                    cellElementNode.className = "flex-shrink-0 w-10 h-10 rounded-xl font-mono text-xs font-bold border transition bg-slate-50 text-slate-500 border-slate-200 hover:bg-slate-100";
                 }
             });
         }
 
         function calculateRealTimeProgressMetrics() {
-            const totalCommissions = Object.keys(registeredChoices).length;
-            document.getElementById("completion-stats-badge").innerText = `${totalCommissions}/120 Completed`;
+            const calculatedLength = Object.keys(localUserAnswers).length;
+            document.getElementById("progress-indicator-pill").innerText = `${calculatedLength}/${testQuestionsSet.length} Saved`;
         }
 
-        function executeStepNavigation(vectorDirection) {
-            let internalCheck = cursorIndex + vectorDirection;
-            if(internalCheck >= 0 && internalCheck < masterActiveTestSet.length) {
-                cursorIndex = internalCheck;
+        function executeStepChange(navigationDirectionVector) {
+            let targetedCheckingIndex = cursorIndex + navigationDirectionVector;
+            if(targetedCheckingIndex >= 0 && targetedCheckingIndex < testQuestionsSet.length) {
+                cursorIndex = targetedCheckingIndex;
                 renderActiveQuestionState();
+                
+                // Align mobile viewport horizontally centering active matrix nodes smoothly
+                const activeCellDOMRef = document.getElementById(`navigator-pill-cell-${cursorIndex}`);
+                activeCellDOMRef?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             }
         }
 
-        function jumpToSpecificExamIndex(explicitTargetIndex) {
-            cursorIndex = explicitTargetIndex;
+        function skipToExplicitTargetIndex(explicitIndexTarget) {
+            cursorIndex = explicitIndexTarget;
             renderActiveQuestionState();
         }
 
         /**
-         * ENGINE CHRONOMETER SYSTEM
-         * Executes an immutable interval verification checking countdown limits every second.
+         * SYSTEM TIMEFRAME CHRONOMETER
+         * Increments down tracking absolute second constraints, displaying warning flashes when critical bounds cross.
          */
-        function triggerChronometerLoop() {
-            processTimerReference = setInterval(() => {
-                temporalCounter--;
+        function startChronometerIntervalLoop() {
+            liveTimerIntervalRef = setInterval(() => {
+                internalSecondsLeft--;
 
-                const hrSegment = Math.floor(temporalCounter / 3600);
-                const minSegment = Math.floor((temporalCounter % 3600) / 60);
-                const secSegment = temporalCounter % 60;
+                const hoursFieldCalculation = Math.floor(internalSecondsLeft / 3600);
+                const minutesFieldCalculation = Math.floor((internalSecondsLeft % 3600) / 60);
+                const secondsFieldCalculation = internalSecondsLeft % 60;
 
-                document.getElementById("chronometer-display").innerText = 
-                    `${hrSegment.toString().padStart(2, '0')}:${minSegment.toString().padStart(2, '0')}:${secSegment.toString().padStart(2, '0')}`;
+                document.getElementById("chronometer-digits").innerText = 
+                    `${hoursFieldCalculation.toString().padStart(2, '0')}:${minutesFieldCalculation.toString().padStart(2, '0')}:${secondsFieldCalculation.toString().padStart(2, '0')}`;
 
-                // Trigger dynamic red alerts if session time limits cross below the 5-minute threshold
-                if (temporalCounter <= 300) {
-                    document.getElementById("chronometer-capsule").className = "px-5 py-2.5 rounded-xl border font-mono font-bold text-base sm:text-xl timer-warning shadow-sm flex items-center gap-2";
+                // Inject structural flash colors under 5 minutes left
+                if (internalSecondsLeft <= 300) { 
+                    document.getElementById("chronometer-box").className = "px-3 py-1.5 rounded-lg border font-mono font-bold text-sm timer-alert shadow-sm";
                 }
 
-                if (temporalCounter <= 0) {
-                    clearInterval(processTimerReference);
-                    alert("Critical Action Notice: Maximum permitted exam timeframe reached. The evaluation machine will now commit saved items automatically.");
-                    executeAutomatedScoreCompilation();
+                if (internalSecondsLeft <= 0) {
+                    clearInterval(liveTimerIntervalRef);
+                    alert("Time context window closure completed. Initiating programmatic compilation routing.");
+                    executeScoreCompilationPipeline();
                 }
             }, 1000);
         }
 
-        function triggerManualSubmission() {
-            const savedItemsCount = Object.keys(registeredChoices).length;
-            const openGapsCount = masterActiveTestSet.length - savedItemsCount;
-
-            let queryString = "Do you confirm you want to permanently submit your CNET test answers for evaluation?";
-            if (openGapsCount > 0) {
-                queryString = `Unanswered Item Warning: You have skipped exactly ${openGapsCount} questions out of 120. Confirm submission anyway?`;
+        function terminateSessionRequest() {
+            const itemsAnswered = Object.keys(localUserAnswers).length;
+            const remainingGap = 120 - itemsAnswered;
+            
+            let verificationMessage = "Are you sure you want to permanently submit your exam paper responses for evaluation?";
+            if(remainingGap > 0) {
+                verificationMessage = `Attention: You are leaving exactly ${remainingGap} questions blank. Finalize score calculation regardless?`;
             }
 
-            if (confirm(queryString)) {
-                clearInterval(processTimerReference);
-                executeAutomatedScoreCompilation();
+            if(confirm(verificationMessage)) {
+                clearInterval(liveTimerIntervalRef);
+                executeScoreCompilationPipeline();
             }
         }
 
         /**
-         * EVALUATION MATRIX PROCESSING COMPILE
-         * Analyzes responses against key-value data targets to generate statistical score indicators.
+         * REPORT PROCESSING MATRIX COMPILE
+         * Maps user choices against explicit key answers to compile total score and metrics.
          */
-        function executeAutomatedScoreCompilation() {
-            let totalAccumulatedScore = 0;
-            let totalAttemptsRegistered = Object.keys(registeredChoices).length;
+        function executeScoreCompilationPipeline() {
+            let finalCorrectAnswersScore = 0;
+            let finalTotalAttemptsCalculated = Object.keys(localUserAnswers).length;
 
-            // Structure analytics metrics objects tracking per subject performance profiles
-            let subjectTrackers = {
-                "Physics": { correct:0, total:0 },
-                "Chemistry": { correct:0, total:0 },
-                "Biology": { correct:0, total:0 },
-                "Nursing Aptitude": { correct:0, total:0 },
-                "English": { correct:0, total:0 }
-            };
+            let categorisedPerformanceTracker = {};
 
-            masterActiveTestSet.forEach((datasetQuestion, itemLoopIndex) => {
-                let userSelection = registeredChoices[itemLoopIndex];
-                
-                // Track baseline distributions
-                if(subjectTrackers[datasetQuestion.subject]) {
-                    subjectTrackers[datasetQuestion.subject].total++;
+            testQuestionsSet.forEach((questionObjectInstance, indexKey) => {
+                if(!categorisedPerformanceTracker[questionObjectInstance.subjectCategoryString]) {
+                    categorisedPerformanceTracker[questionObjectInstance.subjectCategoryString] = { correctHits: 0, totalMax: 0 };
                 }
+                categorisedPerformanceTracker[questionObjectInstance.subjectCategoryString].totalMax++;
 
-                if (userSelection === datasetQuestion.correct_option) {
-                    totalAccumulatedScore++;
-                    if(subjectTrackers[datasetQuestion.subject]) {
-                        subjectTrackers[datasetQuestion.subject].correct++;
-                    }
+                let correspondingCandidateSelection = localUserAnswers[indexKey];
+                if(correspondingCandidateSelection === questionObjectInstance.ans) {
+                    finalCorrectAnswersScore++;
+                    categorisedPerformanceTracker[questionObjectInstance.subjectCategoryString].correctHits++;
                 }
             });
 
-            // Switch presentation interface view components
-            document.getElementById("testing-environment-view").classList.add("hidden");
-            document.getElementById("evaluation-summary-view").classList.remove("hidden");
+            // Transition UI View Components
+            document.getElementById("testing-workspace").classList.add("hidden");
+            document.getElementById("report-view").classList.remove("hidden");
 
-            // Update numerical textual content layers
-            document.getElementById("final-cardholder-name").innerText = applicantIdentity;
-            document.getElementById("calculated-score-out").innerText = totalAccumulatedScore;
-            document.getElementById("attempted-metric-out").innerText = totalAttemptsRegistered;
+            // Populating numerical metrics targets
+            document.getElementById("report-name").innerText = studentIdentityStr;
+            document.getElementById("metric-score").innerText = finalCorrectAnswersScore;
+            document.getElementById("metric-attempts").innerText = `${finalTotalAttemptsCalculated} / 120`;
             
-            // Calculate true mathematical accurate percentage value
-            let accuracyRatingCalculated = totalAttemptsRegistered > 0 ? Math.round((totalAccumulatedScore / totalAttemptsRegistered) * 100) : 0;
-            document.getElementById("accuracy-percentage-out").innerText = `${accuracyRatingCalculated}%`;
+            let accuracyPercentage = finalTotalAttemptsCalculated > 0 ? Math.round((finalCorrectAnswersScore / finalTotalAttemptsCalculated) * 100) : 0;
+            document.getElementById("calculated-accuracy").innerText = `${accuracyPercentage}%`;
 
-            // Compile breakdown table cards dynamically
-            const breakdownBodyContainer = document.getElementById("subject-breakdown-rows");
-            breakdownBodyContainer.innerHTML = "";
+            const tablesRootElementDOM = document.getElementById("breakdown-rows-container");
+            tablesRootElementDOM.innerHTML = ""; // Wipe fallbacks
 
-            Object.keys(subjectTrackers).forEach(subjectKeyName => {
-                let metricsObj = subjectTrackers[subjectKeyName];
-                const rowNode = document.createElement("div");
-                rowNode.className = "flex justify-between items-center px-4 py-3 bg-white";
-                rowNode.innerHTML = `
-                    <span class="font-bold text-slate-700">${subjectKeyName}</span>
-                    <span class="font-mono text-sm bg-slate-100 text-slate-700 px-3 py-1 rounded-lg font-bold">
-                        ${metricsObj.correct} / ${metricsObj.total} Marks
+            Object.keys(categorisedPerformanceTracker).forEach(subjectKeyString => {
+                let metricsNodeValues = categorisedPerformanceTracker[subjectKeyString];
+                let summaryRowDiv = document.createElement("div");
+                summaryRowDiv.className = "flex justify-between items-center px-3 py-2.5 bg-white font-semibold uppercase text-[11px] tracking-wider";
+                summaryRowDiv.innerHTML = `
+                    <span class="text-slate-600">${subjectKeyString}</span>
+                    <span class="font-mono font-bold bg-slate-50 text-slate-800 px-2.5 py-0.5 rounded border border-slate-200">
+                        ${metricsNodeValues.correctHits} / ${metricsNodeValues.totalMax} Marks
                     </span>
                 `;
-                breakdownBodyContainer.appendChild(rowNode);
+                tablesRootElementDOM.appendChild(summaryRowDiv);
             });
         }
     </script>
