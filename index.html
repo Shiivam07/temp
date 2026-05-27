@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>UP CNET OFFICIAL EXAM SIMULATOR</title>
+    <title>UP CNET 2026 MOCK TEST SERIES - SET 2</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         -webkit-tap-highlight-color: transparent;
@@ -25,7 +25,7 @@
             <div class="text-center mb-6">
                 <div class="inline-flex p-3 bg-blue-50 text-blue-600 rounded-2xl font-black text-2xl mb-2">🩺</div>
                 <h1 class="text-2xl font-black text-slate-900 tracking-tight">ABVMU UP CNET 2026</h1>
-                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mt-0.5">High-Yield Rank Booster Series</p>
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mt-0.5">Rank Predictor Test Series - Set 2</p>
             </div>
 
             <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-6 text-xs text-slate-600 space-y-2">
@@ -126,7 +126,7 @@
     <div id="report-view" class="hidden flex-1 flex flex-col items-center p-4 overflow-y-auto">
         <div class="bg-white p-6 rounded-2xl shadow-2xl border border-slate-100 w-full max-w-2xl text-center mb-6">
             <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full font-black text-xl mx-auto flex items-center justify-center shadow-sm mb-3">✓</div>
-            <h2 class="text-xl font-black text-slate-900 tracking-tight">CNET Scorecard Results</h2>
+            <h2 class="text-xl font-black text-slate-900 tracking-tight">CNET Scorecard Results - Set 2</h2>
             <p class="text-xs text-slate-400 font-medium mb-4">Report Compiled For: <span id="report-name" class="font-bold text-slate-600"></span></p>
             
             <div class="bg-slate-50 border rounded-xl p-4 mb-4 grid grid-cols-2 gap-2 text-center">
@@ -150,25 +150,22 @@
                 <div id="breakdown-rows-container" class="divide-y"></div>
             </div>
 
-            <button onclick="window.location.reload()" class="w-full bg-slate-900 text-white font-bold py-3 px-4 rounded-xl text-sm transition mb-4">
-                Generate New Attempt Layout
+            <button onclick="wipeStorageAndReset()" class="w-full bg-slate-900 text-white font-bold py-3 px-4 rounded-xl text-sm transition mb-4">
+                Start Fresh Mock Session
             </button>
         </div>
 
-        <!-- NEW: DYNAMIC QUESTION RESPONSE ANALYSIS SECTION -->
         <div class="w-full max-w-2xl bg-white rounded-2xl shadow-xl border p-5 text-left">
             <h3 class="text-lg font-black text-slate-900 tracking-tight border-b pb-3 mb-4 flex items-center gap-2">
                 <span>📊</span> Comprehensive Question Analysis
             </h3>
             
-            <!-- Color Index Guide -->
             <div class="flex gap-4 text-xs font-bold mb-4 bg-slate-50 p-3 rounded-xl border">
                 <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-emerald-100 border border-emerald-400 rounded"></span> Correct</div>
                 <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-red-100 border border-red-400 rounded"></span> Incorrect</div>
                 <div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-amber-100 border border-amber-400 rounded"></span> Skipped</div>
             </div>
 
-            <!-- Container Target for Injected Items -->
             <div id="analysis-questions-deck" class="space-y-4"></div>
         </div>
     </div>
@@ -177,108 +174,108 @@
     <script>
         const embeddedMasterDatabase = {
             physics: [
-                { q: "Which of the following physical properties represents a completely dimensionless quantity?", a: "Mechanical Strain", b: "Universal gas constant", c: "Surface tension parameters", d: "Coefficient of thermal conductivity", ans: "A" },
-                { q: "What is the absolute numerical value of acceleration due to gravity (g) at the center of the Earth?", a: "9.8 m/s²", b: "Exactly Zero", c: "Infinite scale coordinates", d: "Equal to value at poles", ans: "B" },
-                { q: "The physical parameter known as the Electron Volt (eV) is a fundamental unit used to measure:", a: "Electric charge properties", b: "Potential difference margins", c: "Energy", d: "Electrical power variables", ans: "C" },
-                { q: "For which of the following mechanical bodies does the true center of mass lie completely outside its solid physical body structure?", a: "A linear uniform lead pencil", b: "A uniform solid gambling dice", c: "A circular uniform metallic bangle", d: "A uniform dense iron shotput", ans: "C" },
-                { q: "The net mechanical change in linear momentum of a body over a finite time sequence is equal to the product of:", a: "Force x Mass", b: "Force x Time (Impulse structural baseline)", c: "Force x velocity vectors", d: "Force x absolute path displacement", ans: "B" },
-                { q: "What is the geometric angle separating two vectors of equal magnitude if their resultant also matches the magnitude of either vector?", a: "0 degrees", b: "60 degrees", c: "90 degrees", d: "120 degrees", ans: "D" },
-                { q: "An ice cube floats inside a glass container filled to the brim with water. When this ice cube melts down completely, the water level will:", a: "Rise and overflow boundaries", b: "Fall down significantly", c: "Remain exactly the same", d: "Fluctuate up and down", ans: "C" },
-                { q: "Which among the following classifications of electromagnetic spectrum wavefronts possesses the absolute smallest wavelength bounds?", a: "Yellow visible light waves", b: "Diagnostic medical X-rays", c: "Alpha particle radiation bands", d: "Gamma rays", ans: "D" },
-                { q: "The specific structural layer of the atmosphere that resides closest to the physical crust surface of planet Earth is:", a: "Troposphere", b: "Stratosphere", c: "Mesosphere", d: "Ionosphere", ans: "A" },
-                { q: "The absolute mathematical torque vector acting on an electric dipole moment (P) situated inside a uniform electric field (E) equals:", a: "P x E (Cross product operation)", b: "P . E (Dot product operation)", c: "E x P x P algebraic expansion", d: "Negative dot product matrix", ans: "A" },
-                { q: "Which basic light interaction phenomenon explains the glittering rainbow coloration patterns visible over a thin layer of floating oil film?", a: "Interference of light waves", b: "Total internal reflection mechanics", c: "Rayleigh scattering of light beams", d: "Diffraction of light wavefronts", ans: "A" },
-                { q: "The operational protection framework of a standard electrical safety fuse wire relies completely on the:", a: "Heating effect of electric current", b: "Magnetic effect of running charges", c: "Chemical deposition properties", d: "Electrostatic shielding parameters", ans: "A" },
-                { q: "A simple pendulum tracking unit is shifted from the flat surface of Earth straight into a deep operational coal mine facility. Its total time period parameter will:", a: "Increase due to reduction in g coordinates", b: "Decrease proportionally", c: "Remain completely uninfluenced", d: "Drop immediately down to zero value", ans: "A" },
-                { q: "What is the net sound level intensity adjustment multiplier observed if the absolute distance from a sounding point source is precisely doubled?", a: "Reduces by a factor of four", b: "Reduces down by exactly half", c: "Multiplies upwards by four times", d: "Stays entirely constant at all coordinates", ans: "A" },
-                { q: "The maximum resistance value accessible by grouping three individual resistors of 3 ohms each together manifests in which configuration?", a: "Series connection matrix layout (9 Ohms total)", b: "Parallel connection matrix layout (1 Ohm total)", c: "Combination bridge network assembly", d: "Delta distribution network framework", ans: "A" },
-                { q: "What type of optical mirror component is integrated inside dental inspection setups to show enlarged, erect images of teeth?", a: "Concave mirror geometry", b: "Convex mirror topography", c: "Planar reflective glass substrate", d: "Cylindrical focal point array", ans: "A" },
-                { q: "When an electrical charge is forced along a completely closed loop path within a static conservative electrostatic field environment, net work completed equals:", a: "Exactly Zero", b: "Direct product of path boundaries", c: "Infinite scale factor parameters", d: "Velocity variable scale factor", ans: "A" },
-                { q: "The operational behavior of a standard commercial p-n junction diode under reverse biased wiring configurations showcases a:", a: "Very high electrical resistance profile", b: "Negligible or zero resistance path", c: "Highly erratic fluctuating current", d: "Spontaneous generation of charges", ans: "A" },
-                { q: "What specific parameter coordinates characterize an ideal heat engine performance profile as per the Carnot Theorem limits?", a: "Efficiency depends exclusively on working temperature limits", b: "Efficiency hits absolute 100% at all bounds", c: "Friction loops completely override parameters", d: "Independent of cold sink conditions", ans: "A" },
-                { q: "The dynamic escape velocity scalar metric required to leave the gravitational influence pull of Earth limits sits closest to:", a: "11.2 km/s", b: "11.2 m/s", c: "9.8 km/s", d: "7.4 km/s", ans: "A" },
-                { q: "What primary factor dictates the color profile of an incoming light wave processed by human visual structures?", a: "Wave frequency boundaries", b: "Amplitude threshold limits", c: "Velocity coordinates of transmission", d: "Spatial intensity parameters", ans: "A" },
-                { q: "The intrinsic property of resistance tracking an ideal electrical ammeter instrument should carry what numerical scale value?", a: "Exactly Zero Ohms", b: "Infinite resistance metrics", c: "One hundred ohms static", d: "Highly variable dynamic bounds", ans: "A" },
-                { q: "Which fundamental state transition principle governs the operational framework behind the generation of X-ray beams inside modern tubes?", a: "Inner shell electron transition events", b: "Nuclear fission decomposition reactions", c: "Thermal ionization of gaseous atoms", d: "Spontaneous conversion of neutrons", ans: "A" },
-                { q: "If the absolute temperature of a blackbody radiating structure increases by two times its base, total radiation emission scales by:", a: "16 times multiplier tracking Stefan's Law", b: "2 times simple multiplier tracking", c: "4 times squared relationship scaling", d: "8 times cubic scale modification", ans: "A" }
+                { q: "Which of the following physical quantities shares the exact same SI unit and dimensions as Stress?", a: "Pressure", b: "Surface Tension", c: "Strain", d: "Force", ans: "A" },
+                { q: "A body is thrown vertically upward with a velocity u. The maximum height reached by the body is given by the expression:", a: "u / g", b: "u² / 2g", c: "u² / g", d: "u / 2g", ans: "B" },
+                { q: "What happens to the value of acceleration due to gravity (g) as we move from the equator toward the poles of the Earth?", a: "It increases", b: "It decreases", c: "It remains completely identical", d: "It drops down to zero", ans: "A" },
+                { q: "The dimensional representation of angular momentum is matching which of the following expressions?", a: "[M L^2 T^-1]", b: "[M L^1 T^-1]", c: "[M L^2 T^-2]", d: "[M L^1 T^-2]", ans: "A" },
+                { q: "The working principle of a modern rocket propulsion engine is based completely on the conservation of:", a: "Mass", b: "Linear Momentum", c: "Kinetic Energy", d: "Angular Momentum", ans: "B" },
+                { q: "If two forces of magnitude 5 N and 12 N act orthogonally (at 90 degrees) to each other, their net resultant magnitude is:", a: "7 N", b: "17 N", c: "13 N", d: "60 N", ans: "C" },
+                { q: "The hydraulic lifts used in service stations to elevate heavy vehicles work strictly on the basis of:", a: "Pascal's Law", b: "Bernoulli's Theorem", c: "Archimedes' Principle", d: "Stokes' Law", ans: "A" },
+                { q: "When water is heated from 0°C to 4°C, its density displays which behavioral trend?", a: "It increases continuously", b: "It decreases continuously", c: "It remains completely constant", d: "It drops to zero value", ans: "A" },
+                { q: "Which of the following colors of white light undergoes the absolute maximum deviation when passing through a glass prism?", a: "Red light", b: "Violet light", c: "Green light", d: "Yellow light", ans: "B" },
+                { q: "The operational capacity of an optical microscope lens configuration can be increased by utilizing light of:", a: "Shorter wavelength parameters", b: "Longer wavelength parameters", c: "Higher operational velocity", d: "Lower wave amplitude limits", ans: "A" },
+                { q: "An electric dipole is placed inside a completely non-uniform electric field. It will experience:", a: "Only a translational force", b: "Only a rotational torque", c: "Both a net force and a torque", d: "Neither a force nor a torque", ans: "C" },
+                { q: "The magnetic susceptibility property tracking a perfectly paramagnetic material configuration is always:", a: "Small and Positive", b: "Small and Negative", c: "Large and Negative", d: "Exactly Zero", ans: "A" },
+                { q: "A copper wire is stretched to double its original length. Assuming its density remains constant, its new electrical resistance becomes:", a: "2 times its original", b: "4 times its original", c: "Half its original", d: "One-fourth its original", ans: "B" },
+                { q: "The specific subatomic conversion that occurs inside a nucleus during a spontaneous beta-plus (positron) emission is:", a: "A proton converts into a neutron", b: "A neutron converts into a proton", c: "A neutron converts into an electron", d: "An orbital electron is captured", ans: "A" },
+                { q: "The electromagnetic radiation waves having the highest frequency profile across the entire spectrum are called:", a: "X-rays", b: "Gamma rays", c: "Ultraviolet rays", d: "Radio waves", ans: "B" },
+                { q: "A piece of glass lens has a focal length of +50 cm in air. What is its optical power rating?", a: "+2 Dioptres", b: "-2 Dioptres", c: "+0.5 Dioptres", d: "+5 Dioptres", ans: "A" },
+                { q: "Which primary light phenomenon is responsible for the formation of brilliant mirages across hot desert stretches?", a: "Total Internal Reflection", b: "Light scattering layers", c: "Wave interference tracks", d: "Specular diffraction patterns", ans: "A" },
+                { q: "The intrinsic property of resistance tracking an ideal electrical voltmeter instrument must always be:", a: "Infinite parameters", b: "Exactly Zero Ohms", c: "1000 Ohms static", d: "Variable dynamic scale", ans: "A" },
+                { q: "What thermodynamic parameter remains absolutely unchanged and constant during a standard cyclic process?", a: "Internal energy of the system", b: "Total absorbed heat content", c: "Net work executed", d: "Operating volume margins", ans: "A" },
+                { q: "The specific wave property that remains completely unchanged when light travels from air into a water medium is its:", a: "Frequency", b: "Wavelength", c: "Velocity", d: "Amplitude", ans: "A" },
+                { q: "What structural mirror type is used inside standard flashlight torches to produce a powerful parallel beam of light?", a: "Concave mirror geometry", b: "Convex mirror topography", c: "Plane reflective substrate", d: "Cylindrical focal configuration", ans: "A" },
+                { q: "What is the net phase difference between the displacement and velocity parameters of an object performing simple harmonic motion?", a: "π/2 radians", b: "π radians", c: "Zero radians", d: "2π radians", ans: "A" },
+                { q: "The core functional operation profile of a step-down voltage transformer relies completely on:", a: "Mutual induction properties", b: "Self-induction feedback loops", c: "Eddy current distribution lines", d: "Electrostatic boundary shielding", ans: "A" },
+                { q: "The stopping potential required during a photoelectric effect experiment is directly proportional to the:", a: "Frequency of incident light", b: "Intensity of light source", c: "Work function of collecting plate", d: "Surface area of target emitter", ans: "A" }
             ],
             chemistry: [
-                { q: "Which among the following explicit solutions concentration parameters behaves as an absolute unitless quantity?", a: "Molality metrics", b: "Molarity tracking parameters", c: "Mole fraction", d: "Systemic mass strength (grams/liter)", ans: "C" },
-                { q: "The maximum tracking number of electrons that can be held within a specific orbital subshell carrying azimuthal index 'l' is written as:", a: "4l - 2 mathematical tracker", b: "4l + 2 mathematical tracker", c: "2l + 1 baseline expression", d: "2n² total shell calculation", ans: "B" },
-                { q: "Which element among the following chemical options does not satisfy the structural definition of a Transition Metal?", a: "Silver (Ag)", b: "Lead (Pb)", c: "Tungsten (W)", d: "Manganese (Mn)", ans: "B" },
-                { q: "What is the structural ratio value comparing Pi (π) bonds to Sigma (σ) bonds inside a standard Benzene ring?", a: "1 : 2 ratio metrics", b: "1 : 6 ratio metrics", c: "1 : 4 ratio metrics", d: "1 : 1 equal metrics", ans: "C" },
-                { q: "The spherical shape configuration automatically assumed by falling rain droplets is driven entirely by:", a: "Fluid Viscosity parameters", b: "Surface Tension equilibrium", c: "Ambient Temperature parameters", d: "Atmospheric Pressure parameters", ans: "B" },
-                { q: "The safe, normal pH range tracking healthy human blood circulatory balance coordinates rests at:", a: "0 - 5.25 acidic baseline", b: "7.35 - 7.45 weak alkaline range", c: "6.25 - 6.75 near neutral range", d: "8.00 - 9.25 strong alkaline range", ans: "B" },
-                { q: "The absolute electrode potential values assigned to a Standard Hydrogen Electrode (SHE) is universally fixed at:", a: "0.34 Volts", b: "-0.44 Volts", c: "0.00 Volts", d: "-0.76 Volts", ans: "C" },
-                { q: "What is the chemical formulation name assigned directly to commercial Soda Ash industrial compounds?", a: "Na₂CO₃ (Anhydrous Sodium Carbonate)", b: "Na₂CO₃ · 10H2O (Washing soda)", c: "NaHCO₃ (Baking soda formulation)", d: "NaOH (Caustic soda formulation)", ans: "A" },
-                { q: "Which primary organic functional group molecule sequence characterizes an Ester chemical bond structure?", a: "-COOR group connection link", b: "-CHO terminal aldehyde link", c: "-COOH acidic group link", d: "-CONH₂ amide group link", ans: "A" },
-                { q: "The prophetic physical behavior tracking standard boiling point elevation across solution chemistry contexts belongs to which structural category?", a: "Colligative property dynamics", b: "Thermodynamic state function metrics", c: "Electrochemical distribution matrices", d: "Isotropic structural parameters", ans: "A" },
-                { q: "Which structural element gas acts as the principal chemical raw material during the execution of the Haber Process?", a: "Nitrogen paired with Hydrogen", b: "Oxygen gas paired with Methane", c: "Ammonia gas paired with Methane", d: "Chlorine paired with pure vapor streams", ans: "A" },
-                { q: "What exact product manifests when a Calcium Carbide (CaC2) solid matrix interacts with pure water molecules?", a: "Acetylene (Ethyne) gas", b: "Methane gas formations", c: "Ethane saturated compounds", d: "Carbon dioxide gas outcomes", ans: "A" },
-                { q: "The intensive structural properties tracking the standard conjugate base form of an HCl molecule matches:", a: "Cl⁻ chloride ion configuration", b: "H⁺ proton isolated factor", c: "OH⁻ basic ion composition", d: "H₂O stable molecular pairing", ans: "A" },
-                { q: "Which organic macromolecule carbohydrate sequence represents the primary configuration pattern forming the exoskeleton of insects?", a: "Chitin structural polysaccharide", b: "Cellulose fibrous wall material", c: "Glycogen tissue storage chains", d: "Starch nutritional plant chains", ans: "A" },
-                { q: "What type of hybridization framework characterizes the carbon atoms forming a standard diamond lattice matrix?", a: "sp³ hybridization layout", b: "sp² horizontal sheet layout", c: "sp linear directional layout", d: "sp³d complex structural hybrid", ans: "A" },
-                { q: "The functional definition explaining the chemical property of 'Hard Water' relates mostly to dissolved salts of:", a: "Calcium and Magnesium ions", b: "Sodium and Potassium matrices", c: "Iron and Manganese tracking ions", d: "Copper and Zinc chemical traces", ans: "A" },
-                { q: "Which subatomic configuration rules assert that no two identical fermions can hold equivalent quantum numbers?", a: "Pauli Exclusion Principle", b: "Hund's Multiplicity Rule matrix", c: "Aufbau orientation sequence track", d: "Heisenberg uncertainty bounds", ans: "A" },
-                { q: "The configuration status tracking standard cosmetic face cream creams represents which classification type?", a: "Emulsion layout (liquid inside liquid)", b: "Sol layout (solid suspended in liquid)", c: "Gel layout (liquid locked inside solid)", d: "Foam layout (gas trapped inside liquid)", ans: "A" },
-                { q: "Which specific gas is responsible for the characteristic pungent odor noticed around rotting organic egg waste?", a: "Hydrogen Sulfide (H₂S)", b: "Sulfur Dioxide (SO₂)", c: "Ammonia gas (NH₃)", d: "Carbon Monoxide (CO)", ans: "A" },
-                { q: "The chemical compound representation identifying standard Bleaching Powder formula modules corresponds to:", a: "CaOCl₂ (Calcium Hypochlorite)", b: "CaCO₃ (Calcium Carbonate lines)", c: "Ca(OH)₂ (Slaked lime configurations)", d: "CaCl₂ (Calcium chloride salts)", ans: "A" },
-                { q: "What is the common name of the organic compound historically extracted from willow bark that serves as the base for Aspirin?", a: "Salicylic Acid", b: "Acetic Acid", c: "Benzoic Acid", d: "Citric Acid", ans: "A" },
-                { q: "The primary alloy composition defining standard brass metal mixtures features which element pair?", a: "Copper and Zinc", b: "Copper and Tin", c: "Iron and Carbon components", d: "Lead and Tin soldering elements", ans: "A" },
-                { q: "Which gas acts as the main chemical component of compressed natural gas (CNG) fuel matrix assemblies?", a: "Methane (CH₄)", b: "Propane (C₃H₈)", c: "Butane (C₄H₁₀)", d: "Ethane (C₂H₆)", ans: "A" },
-                { q: "The industrial purification pathway sequence tracking the separation of crude oil fractions into petrol and diesel is:", a: "Fractional Distillation mechanics", b: "Steam extraction separation lines", c: "Chromatographic baseline extraction", d: "Crystalline fraction separation", ans: "A" }
+                { q: "What is the common commercial name of the industrial compound represented by the formula CaO (Calcium Oxide)?", a: "Quick Lime", b: "Slaked Lime", c: "Limestone", d: "Gypsum", ans: "A" },
+                { q: "Which among the following elements exhibits the absolute highest first ionization enthalpy value?", a: "Helium", b: "Neon", c: "Fluorine", d: "Lithium", ans: "A" },
+                { q: "What is the oxidation state calculated for Nitrogen inside a molecule of Nitric Acid (HNO3)?", a: "+5", b: "+3", c: "+4", d: "-3", ans: "A" },
+                { q: "Which gas is spontaneously released when active metals like Zinc react directly with dilute Hydrochloric Acid?", a: "Hydrogen gas", b: "Oxygen gas", c: "Chlorine gas", d: "Nitrogen dioxide", ans: "A" },
+                { q: "The functional organic group designation structural sequence identifying a Carboxylic Acid matches:", a: "-COOH group link", b: "-CHO terminal link", c: "-OH structural link", d: "-COOR linkage node", ans: "A" },
+                { q: "Which chemical concentration unit changes its value if the surrounding ambient temperature fluctuates?", a: "Molarity", b: "Molality", c: "Mole fraction", d: "Weight percentage (% w/w)", ans: "A" },
+                { q: "The process of heating an ore strongly below its melting point in the complete absence or limited supply of air is called:", a: "Calcination", b: "Roasting", c: "Smelting", d: "Electrochemical reduction", ans: "A" },
+                { q: "What specific crystal defect leaves the net density of an ionic solid crystal completely unchanged?", a: "Frenkel Defect", b: "Schottky Defect", c: "Interstitial vacancy inclusion", d: "Metal excess F-center anomaly", ans: "A" },
+                { q: "The common household chemical compound known as Plaster of Paris is represented by which formula?", a: "CaSO4 · 1/2 H2O", b: "CaSO4 · 2 H2O", c: "CuSO4 · 5 H2O", d: "MgSO4 · 7 H2O", ans: "A" },
+                { q: "The organic compound manufacturing pathway known as the Rosenmund Reduction is explicitly used to synthesize:", a: "Aldehydes", b: "Carboxylic acids", c: "Ketones", d: "Esters", ans: "A" },
+                { q: "What type of intermolecular attractions are primarily responsible for the surprisingly high boiling point of water compared to hydrogen sulfide?", a: "Hydrogen bonding", b: "Dipole-dipole interactions", c: "London dispersion forces", d: "Covalent coordinate bonds", ans: "A" },
+                { q: "Which element among the following listed options carries the highest electronegativity rating scale value?", a: "Fluorine", b: "Oxygen", c: "Chlorine", d: "Nitrogen", ans: "A" },
+                { q: "What type of organic structural hybrid configuration characterizes the carbon-carbon triple bond inside Ethyne?", a: "sp hybridization", b: "sp² hybridization", c: "sp³ hybridization", d: "dsp² hybridization", ans: "A" },
+                { q: "The monomer units that link together sequentially to form the natural rubber polymer chain matrix are called:", a: "Isoprene", b: "Chloroprene", c: "Neoprene", d: "Styrene", ans: "A" },
+                { q: "The primary metallic composition forming standard kitchen Stainless Steel alloys includes Iron combined with:", a: "Chromium and Nickel", b: "Copper and Zinc", c: "Lead and Tin", d: "Aluminum and Magnesium", ans: "A" },
+                { q: "According to the Lewis definition parameters of acids and bases, a base is classified as a substance that:", a: "Can donate an electron pair", b: "Can accept a proton factor", c: "Can release hydroxide ions (OH-)", d: "Can donate a proton factor", ans: "A" },
+                { q: "What is the coordinate geometry structure tracking a molecule of Phosphorus Pentachloride (PCl5) in gas phase?", a: "Trigonal Bipyramidal", b: "Square Planar", c: "Perfect Octahedral", d: "Tetrahedral shape profile", ans: "A" },
+                { q: "The dynamic phenomenon known as Brownian Movement inside colloidal chemistry configurations refers explicitly to:", a: "The random zigzag motion of colloidal particles", b: "The migration of fractions under electrical fields", c: "The separation of components via selective filters", d: "The optical scattering of light beams", ans: "A" },
+                { q: "Which compound can be successfully utilized as a primary food preservative to prevent microbial spoilage inside canned materials?", a: "Sodium Benzoate", b: "Sodium Hydroxide", c: "Calcium Sulfate", d: "Potassium Permanganate", ans: "A" },
+                { q: "What specific gas is produced when Ammonium Chloride is heated directly with a Slaked Lime substrate?", a: "Ammonia (NH3)", b: "Nitrogen (N2)", c: "Chlorine (Cl2)", d: "Nitrous Oxide (N2O)", ans: "A" },
+                { q: "The core chemical refining process known as the Van Arkel Method is industrially applied to purify which metal?", a: "Titanium and Zirconium", b: "Copper and Zinc", c: "Aluminum and Iron", d: "Lead and Tin elements", ans: "A" },
+                { q: "Which structural class of vitamins contains members that dissolve easily inside water channels and must be supplied regularly?", a: "Vitamin B complex and Vitamin C", b: "Vitamin A and Vitamin D", c: "Vitamin E and Vitamin K", d: "Vitamin D and Vitamin E profiles", ans: "A" },
+                { q: "The chemical gas that behaves as the main component forming the structural configuration of Tear Gas blocks is:", a: "Chloropicrin", b: "Phosgene", c: "Mustard Gas", d: "Nitrous Oxide", ans: "A" },
+                { q: "The functional definition explaining the extraction of pure copper from copper matte involves blowing air to cause self-reduction of:", a: "Cu2S with Cu2O", b: "CuS with CuO", c: "CuFeS2 with SiO2", d: "FeS with O2 matrices", ans: "A" }
             ],
             biology: [
-                { q: "The natural biological phenomenon of pollination happening within completely closed, un-opened floral structures is called:", a: "Cleistogamy", b: "Chasmogamy", c: "Xenogamy", d: "Geitonogamy", ans: "A" },
-                { q: "The uterus is a single musculomembranous organ found inside the female reproductive tract, also commonly referred to as the:", a: "Cervical canal node", b: "Ovary capsule cell", c: "Womb", d: "Ampulla fertilization site", ans: "C" },
-                { q: "In which historical year were the National Family Planning Programmes officially initiated by the Government of India?", a: "1947", b: "1951", c: "1965", d: "1971", ans: "B" },
-                { q: "Which of the following cellular defense elements functions as a protective blood protein synthesized to neutralize invading foreign antigens?", a: "Allergen matrix", b: "Antibody immunoprotein", c: "Allergy cellular triggers", d: "Oncogene mutation codes", ans: "B" },
-                { q: "The distinct, large processing holes visible within commercial Swiss Cheese blocks form due to fermentation releases of:", a: "H2SO4 acid parameters", b: "Oxygen gas elements", c: "Carbon Dioxide (CO2) gas blocks", d: "Hydrogen Sulfide (H2S) gases", ans: "C" },
-                { q: "What specialized biochemical enzyme class is utilized across genetic bio-engineering to weld detached DNA fragments together?", a: "DNA Ligase category glue", b: "Restriction Endonuclease scissors", c: "Amylase enzyme fraction", d: "Polymerase synthesis block", ans: "A" },
-                { q: "Plants that produce seeds that are fully exposed and completely naked, lacking an outer fruit protective wall covering belong to:", a: "Angiosperms", b: "Gymnosperms", c: "Pteridophytes", d: "Bryophytes", ans: "B" },
-                { q: "The distinct presence of epidermal modifications called feathers across physical body surfaces stands out as an exclusive marker profile for:", a: "Mammals", b: "Reptiles", c: "Aves (Bird taxonomic classes)", d: "Amphibians", ans: "C" },
-                { q: "When the green sepals of a developing flower are completely fused and united together, the structural condition is called:", a: "Polysepalous", b: "Gamosepalous", c: "Polypetalous", d: "Gamopetalous", ans: "B" },
-                { q: "Each functional mammalian Hemoglobin blood molecule can bind and transport a maximum of how many Oxygen molecules?", a: "5 molecules scale", b: "4 molecules scale", c: "3 molecules scale", d: "2 molecules scale", ans: "B" },
-                { q: "Which among the following listed structural segments does not constitute a valid wave element tracking a standard human Electrocardiogram (ECG)?", a: "P-Wave", b: "Q-Wave", c: "T-Wave", d: "Z-Wave (Non-existent wave function)", ans: "D" },
-                { q: "The abnormal clinical condition involving excessive accumulation of toxic Urea solutes within the human blood stream is termed:", a: "Angina chest limits", b: "Gout crystallization", c: "Uremia", d: "Osteoporosis framework decay", ans: "C" },
-                { q: "Which target zone inside the human cell nucleus serves as the primary site for active ribosomal RNA (rRNA) synthesis?", a: "Ribosome assembly lines", b: "Mitochondrial internal shelves", c: "Nucleolus sub-nuclear focus core", d: "Vacuolar fluid spaces", ans: "C" },
-                { q: "Which gland in the human body is classified as a heterocrine gland because it functions as both an exocrine and an endocrine gland?", a: "Pancreas organ network", b: "Thyroid tissue loops", c: "Pituitary master cell block", d: "Adrenal gland cortex caps", ans: "A" },
-                { q: "The primary anatomical site where mature human sperm cells develop motility parameters and are stored prior to ejaculation is the:", a: "Epididymis duct coiled tubules", b: "Vas deferens transport tube", c: "Seminal vesicle nutrient loop", d: "Prostate glandular channels", ans: "A" },
-                { q: "Which human vitamin is directly required as a structural cofactor to stabilize blood clotting cascades and prevent hemorrhage?", a: "Vitamin K fat soluble factor", b: "Vitamin C water soluble factor", c: "Vitamin A retina support factor", d: "Vitamin D calcium routing factor", ans: "A" },
-                { q: "The definitive diagnostic condition known as 'Diabetes Insipidus' develops due to the hyposecretion of which hormone?", a: "Antidiuretic Hormone (ADH / Vasopressin)", b: "Insulin endocrine fraction", c: "Glucagon tracking fraction", d: "Oxytocin uterine trigger lines", ans: "A" },
-                { q: "Which unique cell type lines the internal sponge space walls of a standard freshwater sponge, creating water currents?", a: "Choanocyte (Collar cell vectors)", b: "Pinacocyte skin matrix plates", c: "Amoebocyte migratory segments", d: "Nematocyst stinging cells", ans: "A" },
-                { q: "The primary site responsible for initial mechanical and initial chemical carbohydrate digestion inside the human body is the:", a: "Mouth (Buccal cavity via salivary amylase)", b: "Stomach chamber lumen via pepsin systems", c: "Duodenal segment brush borders", d: "Ileum track absorption column surfaces", ans: "A" },
-                { q: "What structural configuration label maps to organisms that maintain a constant internal body temperature regardless of ambient environment shifts?", a: "Homeothermic (Warm-blooded profile)", b: "Poikilothermic (Cold-blooded profile)", c: "Ectothermic parameter matrices", d: "Anadromous migration variants", ans: "A" },
-                { q: "The genetic disorder caused by the presence of an extra copy of chromosome number 21 (Trisomy 21) is officially named:", a: "Down's Syndrome genetic profile", b: "Klinefelter's mutation configuration", c: "Turner's single chromosome deletion", d: "Edward's severe trisomy layout", ans: "A" },
-                { q: "Which structural valve controls and prevents the backward flow of blood from the left ventricle into the left atrium?", a: "Bicuspid (Mitral) valve structure", b: "Tricuspid valve entry barrier", c: "Aortic semilunar ring structure", d: "Pulmonary loop backflow barrier", ans: "A" },
-                { q: "What specific physiological pigment asset molecule gives human skeletal muscle fibers their deep red coloration profile?", a: "Myoglobin storage protein", b: "Hemoglobin transport system protein", c: "Melanin skin layer protectant", d: "Bilirubin metabolic waste fraction", ans: "A" },
-                { q: "The botanical plant growth hormone responsible for inducing apical dominance behaviors across plant stems is:", a: "Auxin growth compound series", b: "Gibberellin cellular elongation agent", c: "Cytokinin active division hormone", d: "Abscisic acid stress reaction tracker", ans: "A" }
+                { q: "Which structural region inside a mammalian cell acts as the exclusive assembly site for synthesizing lipids and steroids?", a: "Smooth Endoplasmic Reticulum (SER)", b: "Rough Endoplasmic Reticulum (RER)", c: "Granular Ribosome units", d: "Nucleolus sub-nuclear zone", ans: "A" },
+                { q: "In the human neurological framework, which specific brain structure regulates baseline body temperature, hunger, and thirst?", a: "Hypothalamus", b: "Cerebellum", c: "Medulla Oblongata", d: "Thalamus", ans: "A" },
+                { q: "The functional tissue structure that forms the secure connection link unifying a skeletal muscle directly to a bone is a:", a: "Tendon", b: "Ligament", c: "Cartilage disc", d: "Areolar sheet", ans: "A" },
+                { q: "Which human endocrine gland is historically referred to as the 'Master Gland' due to its regulatory control over others?", a: "Pituitary Gland", b: "Thyroid Gland", c: "Adrenal Gland", d: "Thymus Gland", ans: "A" },
+                { q: "The specialized physiological state during which a cell context remains alive but temporarily ceases active division loops is:", a: "G0 Phase (Quiescent Stage)", b: "S Phase execution", c: "M Phase mitosis tracking", d: "G2 Phase validation checkpoint", ans: "A" },
+                { q: "The diagnostic identification strategy known as the ELISA test operates primarily on which laboratory principle?", a: "Antigen-Antibody interaction loops", b: "DNA polymer amplification sequences", c: "Vascular fluid density parameters", d: "Bacterial culture agglutination metrics", ans: "A" },
+                { q: "Which structural component forms the absolute highest percentage of matrix bulk inside human blood plasma?", a: "Water (around 90-92%)", b: "Fibrinogen proteins", c: "Globulin defense factors", d: "Sodium electrolyte ions", ans: "A" },
+                { q: "The genetic inheritance pattern tracking human hemophilia conditions categorizes this disorder as an:", a: "X-linked recessive trait loop", b: "Autosomal dominant expression scale", c: "Y-linked exclusive mutation line", d: "Mitochondrial maternal trace alignment", ans: "A" },
+                { q: "The botanical plant structural component that functions to control opening and closing steps across stomatal pores is form by:", a: "Guard Cells", b: "Subsidiary tracking cells", c: "Epidermal flat cells", d: "Mesophyll interior cells", ans: "A" },
+                { q: "What target gas is fixed into simple organic sugars during the light-independent (Dark) reactions of photosynthesis?", a: "Carbon Dioxide (CO2)", b: "Elemental Oxygen gas (O2)", c: "Water vapor molecules", d: "Gaseous Nitrogen assets", ans: "A" },
+                { q: "The structural connection zones that allow rapid chemical signal transitions across adjacent nerve cell boundaries are:", a: "Synapses", b: "Axon sheaths", c: "Myelin nodes", d: "Dendrite walls", ans: "A" },
+                { q: "Which blood type configuration is recognized across clinical contexts as the Universal Donor because it lacks A and B antigens?", a: "O Negative (O-)", b: "AB Positive (AB+)", c: "O Positive (O+)", d: "A Negative (A-)", ans: "A" },
+                { q: "The macro-biological process explaining the extraction of clear energetic glucose assets into pyruvic acid lines is:", a: "Glycolysis", b: "Krebs Tricarboxylic Acid Cycle", c: "Oxidative phosphorylation", d: "Glycogenolysis path sequences", ans: "A" },
+                { q: "Which specific vector organism functions as the mechanical carrier distributing Dengue fever viral strains to human targets?", a: "Aedes mosquito vector lines", b: "Anopheles mosquito tracking lines", c: "Culex generic mosquito vectors", d: "Glossina vector fly matrices", ans: "A" },
+                { q: "The structural cell component category matching the composition of plant cell walls is predominantly made of:", a: "Cellulose", b: "Chitin polymer layers", c: "Peptidoglycan matrices", d: "Glycogen chain units", ans: "A" },
+                { q: "What functional endocrine secretion forces rapid calcium removal out of circulating blood frames, shifting it back into bone storage?", a: "Calcitonin (thyroid C-cells)", b: "Parathyroid Hormone (PTH)", c: "Aldosterone loops", d: "ThyroxineSPEED speed controls", ans: "A" },
+                { q: "The developmental milestone tracking the conversion step of an early blastomere bundle into a hollow sphere cell layout is:", a: "Blastulation cell structures", b: "Morus stage cell compression", c: "Gastrulation germ layer mapping", d: "Neurulation chord restructuring", ans: "A" },
+                { q: "Which part of the human inner ear is strictly responsible for processing acoustic sound vibration frequencies into signals?", a: "Cochlea spiral system", b: "Semicircular balance canal rings", c: "Tympanic outer layer system", d: "Vestibule positioning tracking room", ans: "A" },
+                { q: "The unique enzyme present in high concentrations within human tear secretions and saliva that dissolves bacterial cell walls is:", a: "Lysozyme", b: "Amylase", c: "Pepsinogen", d: "Trypsin", ans: "A" },
+                { q: "Which human hormone triggers the sudden, rapid rupture of the mature Graafian follicle, leading directly to Ovulation?", a: "Luteinizing Hormone (LH)", b: "Follicle Stimulating Hormone (FSH)", c: "Estrogen", d: "Progesterone", ans: "A" },
+                { q: "The specific structural stage of cell meiosis where homologous chromosome pairs line up across the equatorial plate is:", a: "Metaphase I", b: "Prophase I reconstruction", c: "Anaphase I separation", d: "Telophase I separation", ans: "A" },
+                { q: "What biological phenomenon prevents more than one single sperm from successfully fertilizing a human egg?", a: "Cortical reaction leading to depolarization of the oocyte membrane", b: "Spontaneous dissolution of sperm tail threads", c: "Rapid acidic shifts inside local tracks", d: "Immediate encapsulation via uterine fluids", ans: "A" },
+                { q: "Which human vascular vessel features an unique layout transporting fully oxygenated blood loads straight into the left atrium?", a: "Pulmonary Vein", b: "Superior Vena Cava line", c: "Pulmonary Artery line", d: "Carotid trunk axis", ans: "A" },
+                { q: "The diagnostic identification routine called the Mantoux Test is utilized across respiratory isolation units to screen for:", a: "Tuberculosis indicators", b: "Typhoid fever baseline tracks", c: "Pneumonic bacterial profiles", d: "Infectious viral setups", ans: "A" }
             ],
             nursing_aptitude: [
-                { q: "The normal estimated volumetric target for urine output evaluated across a healthy human adult over a 24-hour cycle rests closest to:", a: "1500 ml volume baseline", b: "1400 ml volume baseline", c: "1300 ml volume baseline", d: "1200 ml volume baseline", ans: "A" },
-                { q: "The normal physiological value window defining healthy bleeding times across basic clinical settings spans:", a: "1 to 2 minutes timeline", b: "1 to 4 minutes timeline", c: "1 to 3 minutes timeline", d: "1 to 5 minutes timeline", ans: "C" },
-                { q: "According to skeletal structural classifications, which of the following choices is NOT a valid bone shape group?", a: "Long bones profile", b: "Short bones profile", c: "Flat bones profile", d: "Regular bones (Anatomically it is Irregular)", ans: "D" },
-                { q: "The initial promotion and trigger launching milk secretion pathways within maternal mammary glands is driven by:", a: "Luteinizing hormone trigger", b: "Follicle-stimulating hormone axis", c: "Prolactin hormone secretor", d: "Somatotrophic growth hormone", ans: "C" },
-                { q: "Food intoxication or generic food poisoning contracted due to poorly compressed commercial canned food lines is driven by which bacterium?", a: "Staphylococcus groups", b: "Clostridium Botulinum spore profiles", c: "Streptococcus baseline chains", d: "Salmonella typical pathogen profiles", ans: "B" },
-                { q: "The administration of moisture-laden steam inhalation therapy to an adult patient suffering from severe chest congestion aims to:", a: "Provide general relaxation parameters", b: "Liquefy and remove thick tenacious sputum blocks", c: "Aid basic sleep induction processes", d: "Suppress superficial local neural pains", ans: "B" },
-                { q: "When a nurse evaluates an active patient's pulse and observes a distinct rhythm anomaly where beats are frequently skipped, this is documented as an:", a: "Irregular pulse sequence", b: "Dicrotic double beat pulse wave", c: "Intermittent pulse sequence profile", d: "Regular baseline bradycardia wave", ans: "C" },
-                { q: "A patient experiencing acute orthopnea registers what specific type of physiological respiratory stress pattern?", a: "Cheyne-stokes terminal respiration curves", b: "Severe discomfort breathing while lying flat, relieved by sitting upright", c: "Noisy snoring stertorous exhalations", d: "Complete mechanical cessation of all chest movements", ans: "B" },
-                { q: "The highly specialized clinical posture position mandatory for executing routine vaginal delivery operations across maternity units is the:", a: "Lithotomy Position", b: "Dorsal Recumbent position", c: "Trendelenburg structural slope", d: "Sim's lateral safety position", ans: "A" },
-                { q: "Which baseline diagnostic pathway is utilized across healthcare clinics to complete diagnostic Mantoux tuberculin skin testing?", a: "Intramuscular deep muscle injection", b: "Intradermal skin layer injection", c: "Subcutaneous fat layer routing", d: "Intravenous immediate vascular delivery", ans: "B" },
-                { q: "The diagnostic phrase tracking abnormal fluid accumulation sealed up tightly inside a definite clinical sac is categorized as a:", a: "Tumor macro layout", b: "Wart skin protrusion", c: "Cyst fluid development", d: "Polyp cellular structure block", ans: "C" },
-                { q: "The primary class tracking therapeutic drug assets like Morphine falls under which category classification?", a: "Belladonna plant alkaloids", b: "Anticholinergics blocking paths", c: "Opiates narcotic analgesics", d: "Barbiturates sedative structures", ans: "C" },
-                { q: "The administrative abbreviation 'IPPB' managed across respiratory therapy divisions stands for:", a: "Immediate Positive Pressure Breathing", b: "Intermittent Positive Pressure Breathing", c: "Intermission Positive Pressure Breathing", d: "Indirect Positive Pressure Breathing", ans: "B" },
-                { q: "The clinical practice of using high pressure steam inside an autoclave unit to eradicate all microbial spores is defined as:", a: "Sterilization", b: "Disinfection", c: "Sanitization", d: "Antisepsis", ans: "A" },
-                { q: "According to standard biomedical waste segregation protocols in India, contaminated plastic surgical gloves and intravenous sets must be discarded in which color-coded container?", a: "Yellow bin line", b: "Red bin line", c: "Blue cardboard box", d: "Black waste bag", ans: "B" },
-                { q: "A nurse encounters an adult patient who is totally unresponsive with absent breathing parameters. What is the correct initial compression-to-ventilation ratio for executing cardiopulmonary resuscitation (CPR)?", a: "15:2 ratio", b: "30:2 ratio", c: "5:1 ratio", d: "50:5 ratio", ans: "B" },
-                { q: "What does the letter 'L' represent within standard foundational textbook acronym definitions tracing professional 'NURSE' qualities?", a: "Love", b: "Leadership", c: "Loyalty", d: "Learning", ans: "B" },
-                { q: "What does the letter 'E' represent within standard foundational textbook acronym definitions tracing professional 'NURSE' qualities?", a: "Efficiency", b: "Empathy", c: "Education", d: "Examination", ans: "A" },
-                { q: "An otolaryngologist is a highly specialized clinical physician focusing on the direct diagnosis and treatment of:", a: "Cardiovascular systems", b: "Pulmonary respiratory systems", c: "Ocular visual channels", d: "Ears, Nose, and Throat tracks (ENT)", ans: "D" },
-                { q: "Who is widely recognized across global history text entries as the pioneer and founder of modern professional nursing principles?", a: "Marie Curie", b: "Florence Nightingale", c: "Clara Barton", d: "Mother Teresa", ans: "B" },
-                { q: "What historic item was Florence Nightingale famously noted for carrying while monitoring injured soldiers during the Crimean War?", a: "A professional first-aid kit", b: "A lamp", c: "A stethoscope instrument", d: "A glass syringe tool", ans: "B" },
-                { q: "Where did Florence Nightingale establish her very first scientifically managed professional nursing training school?", a: "Paris, France", b: "New York, USA", c: "London, UK (St. Thomas' Hospital)", d: "Florence, Italy", ans: "C" },
-                { q: "What is the primary operational role of a clinical nurse acting under the explicit functional definition of an 'Educator'?", a: "To perform immediate emergency surgeries", b: "To provide patients with clear information about managing their health parameters", c: "To assist residency physicians in mechanical diagnosis steps", d: "To calibrate heavy institutional radiological hardware", ans: "B" },
-                { q: "What is the core structural sequence layout defining the core operational stages of the standard Nursing Process?", a: "Assessment, Planning, Implementation, Evaluation", b: "Planning, Implementation, Assessment, Evaluation", c: "Implementation, Evaluation, Planning, Assessment", d: "Evaluation, Assessment, Planning, Implementation", ans: "A" }
+                { q: "According to standard biomedical waste segregation laws in India, human placenta and extracted tissue samples must go into which color bin?", a: "Yellow color plastic container bin", b: "Red color dynamic recycle bin", c: "Blue cardboard puncture-proof box", d: "Black common municipal waste liner", ans: "A" },
+                { q: "What is the primary medication of choice distributed for the immediate public emergency treatment of a severe systemic Anaphylactic Shock?", a: "Adrenaline (Epinephrine)", b: "Benzyl penicillin tracking dose", c: "Hydrocortisone steroid element", d: "Atropine acceleration tracking drug", ans: "A" },
+                { q: "The baseline clinical tracking framework handled across emergency zones to check a patient's level of consciousness is the:", a: "Apgar matrix profile", b: "Glasgow Coma Scale (GCS)", c: "Braden risk evaluation sheets", d: "Visual Analogue Scale blocks", ans: "B" },
+                { q: "What specific body posture alignment profile must a floor nurse implement for a client suffering from acute, severe dyspnea?", a: "High Fowler's sitting position layout", b: "Fully horizontal flat prone configuration", c: "Supine positioning with elevation of limbs", d: "Trendelenburg head-down tilt configuration", ans: "A" },
+                { q: "What acronym value describes an unexpected infection tracking path a candidate picks up while residing inside a medical facility stay?", a: "Nosocomial Infection (Hospital Acquired)", b: "Idiopathic unknown baseline shift", c: "Zoonotic transmission module", d: "Congenital tracking path", ans: "A" },
+                { q: "When reading the 'NURSE' acronym definition profiles found inside test booklets, what baseline target trait does the letter 'E' translate to?", a: "Efficiency", b: "Empathy", c: "Education", d: "Examination", ans: "A" },
+                { q: "The legal operational entity empowered to govern and standardize professional education profiles for nursing assets across India is the:", a: "Indian Nursing Council (INC)", b: "National Medical Commission (NMC)", c: "World Health Organization regional desks", d: "State Medical Faculty Examination branch", ans: "A" },
+                { q: "What immediate operational safety baseline takes definitive precedence when a floor nurse detects a fire breakout inside a care ward partition?", a: "Rescue and move any clients out of immediate environment danger zones", b: "Locate handheld chemical suppression canisters to target flame points", c: "Activate manual pull stations to alert the institutional grid framework", d: "Isolate central high-pressure pipeline feeds dealing with oxygen gas", ans: "A" },
+                { q: "Which operational dynamic is classified as an example of an open, clear breach matching the professional healthcare code of Client Confidentiality?", a: "Debating personal diagnostic variables of an active client within public elevator areas", b: "Sharing specific tracking details with direct members of the primary care team", c: "Logging assessment data loops inside password-protected server nodes", d: "Disclosing vital tracking data variables to designated legal guardians with clear authorization", ans: "A" },
+                { q: "The clinical practice standard mapping known across global healthcare contexts as 'Universal Precautions' requires what baseline nurse behavior?", a: "Handling all human body fluid elements as potentially active infectious carriers", b: "Screening target diagnostic charts exclusively for specific historical infections", b: "Donning complete sterile clothing elements for standard basic evaluations", d: "Restricting access limits for high-risk diagnostic sections exclusively", ans: "A" },
+                { q: "What is the primary clinical reason for frequently changing the position of an immobile bedbound client every two hours?", a: "To prevent local tissue necrosis and the formation of pressure ulcers", b: "To lower the overall work burden on local floor care team networks", c: "To accelerate metabolic rate parameters artificially", d: "To standardize dynamic charting data inputs across shifts", ans: "A" },
+                { q: "What specific objective indicator parameter constitutes a clinical 'Sign' rather than a subjective client 'Symptom'?", a: "A measured core body temperature value of 39°C via thermometer", b: "A patient's verbal description of chest tightness", c: "A client tracking a feeling of moderate dizziness", d: "An expression of generalized muscle fatigue", ans: "A" },
+                { q: "According to the universal 'Rule of Nines' handled across emergency triage units, the calculation evaluates:", a: "Total Body Surface Area (TBSA) affected by burns", b: "The visual tracking clarity index of eyesight", c: "The risk parameters of pressure sores", d: "Childhood nutritional deficiency metrics", ans: "A" },
+                { q: "The psychiatric therapeutic drug asset known as Lithium is universally managed as the primary agent to control:", a: "Bipolar Disorder mood fluctuations", b: "Unipolar clinical depression states", c: "Schizophrenic cognitive regression tracks", d: "Isolated phobia avoidance reactions", ans: "A" },
+                { q: "The psychiatric behavioral sequence identified under the nomenclature 'Bulimia Nervosa' represents an:", a: "Eating disorder characterized by bingeing and purging", b: "Anxiety disorder tracking pattern matrix", c: "Mood regression phase mapping layout", d: "Neurological coordination baseline deficit", ans: "A" },
+                { q: "The application of high-pressure saturated steam inside an autoclave machine to eliminate all active microbial life forms is defined as:", a: "Sterilization", b: "Disinfection", c: "Sanitization", d: "Antisepsis", ans: "A" },
+                { q: "The medical abbreviation 'NPO' written inside a client's specific clinical instruction chart translates to:", a: "Nothing by mouth (Nulla per os parameters)", b: "Administer medications exclusively during nighttime hours", c: "Patient requires immediate isolation precautions", d: "New patient orientation checklist execution required", ans: "A" },
+                { q: "What is the primary operational objective behind placing a surgical candidate on a restriction timeline before an elective general anesthesia procedure?", a: "To minimize the danger of pulmonary aspiration of stomach contents", b: "To accelerate the postoperative processing timeline of the sedative agents", c: "To manage systemic fluid weight parameters down prior to incisional lines", d: "To limit structural variations in baseline metabolic heat indexes", ans: "A" },
+                { q: "What standard size gauge size color notation tags the peripheral intravenous cannula used for rapid fluid resuscitation across adult trauma cases?", a: "Green coloration (18 Gauge configuration)", b: "Blue coloration (22 Gauge configuration)", c: "Pink coloration (20 Gauge configuration)", d: "Yellow coloration (24 Gauge configuration)", ans: "A" },
+                { q: "What specific tracking route provides the absolute fastest systemic absorption profile for a administered therapeutic drug asset?", a: "Intravenous (IV) direct injection pathway", b: "Subcutaneous (SC) tissue deposit routing", c: "Intramuscular (IM) deep tissue matrix routing", d: "Oral ingestion gastrointestinal absorption lines", ans: "A" },
+                { q: "A nurse tracks a client's baseline respiration behavior and calculates a breathing frequency of 8 cycles per minute. This scenario is documented as:", a: "Bradypnea breathing deceleration", b: "Tachypnea acceleration tracking", c: "Eupnea standard baseline tracking", d: "Apnea cessation configuration", ans: "A" },
+                { q: "What is the principal clinical indicator monitored to screen for the initial development of thrombophlebitis across a localized IV access insertion site?", a: "Erythema, localized warmth, and tenderness along the course of the vein", b: "Coolness of the surrounding dermal tissue paired with blanched color tones", c: "Spontaneous arterial blood backflow leaking into the clear hub tubing line", d: "Complete absence of resistance patterns when flashing saline flushes", ans: "A" },
+                { q: "The professional validation practice known as 'Triage' inside emergency department sectors involves:", a: "Categorizing patients sequentially based on the urgent severity of their medical needs", b: "Processing financial insurance premium accounts ahead of medical interventions", c: "Executing comprehensive verification routines to check historical records", d: "Distributing routine pharmaceutical prescriptions to outgoing client groups", ans: "A" },
+                { q: "The first engineering step when executing cardiopulmonary resuscitation (CPR) tracking on an adult casualty requires checking for:", a: "Responsiveness by tapping shoulders and shouting", b: "Pupillary light reflex variations using a penlight", c: "Deep spinal reflex responses using a hammer tool", d: "Blood pressure parameters using a cuff device", ans: "A" }
             ],
             english: [
                 { q: "Identify the alternative option that correctly locates the syntax error within the following statement: 'The panel of medical specialists have concluded that the patient requires surgery.'", a: "The panel of", b: "medical specialists have", c: "concluded that", d: "requires surgery", ans: "B" },
@@ -308,7 +305,6 @@
             ]
         };
 
-        // RUNTIME COMPILER VARIABLE MATRIX
         let testQuestionsSet = [];
         let cursorIndex = 0;
         let localUserAnswers = {}; 
@@ -317,6 +313,33 @@
         let studentIdentityStr = "";
 
         const dynamicSubjectKeys = ['physics', 'chemistry', 'biology', 'nursing_aptitude', 'english'];
+
+        // IMMUTABLE LOCAL STORAGE INITIALIZATION ENGINE
+        window.addEventListener('DOMContentLoaded', () => {
+            const preservedStatus = localStorage.getItem('cnet_exam_status');
+            if (preservedStatus === 'active') {
+                studentIdentityStr = localStorage.getItem('cnet_student_name');
+                testQuestionsSet = JSON.parse(localStorage.getItem('cnet_questions_pool'));
+                localUserAnswers = JSON.parse(localStorage.getItem('cnet_user_answers')) || {};
+                internalSecondsLeft = parseInt(localStorage.getItem('cnet_timer_seconds'));
+                cursorIndex = parseInt(localStorage.getItem('cnet_cursor_idx')) || 0;
+
+                document.getElementById("registration-gateway").classList.add("hidden");
+                document.getElementById("testing-workspace").classList.remove("hidden");
+                document.getElementById("runtime-candidate-name").innerText = studentIdentityStr;
+
+                generateNavigatorMatrixNodes();
+                renderActiveQuestionState();
+                startChronometerIntervalLoop();
+            } else if (preservedStatus === 'finished') {
+                studentIdentityStr = localStorage.getItem('cnet_student_name');
+                testQuestionsSet = JSON.parse(localStorage.getItem('cnet_questions_pool'));
+                localUserAnswers = JSON.parse(localStorage.getItem('cnet_user_answers')) || {};
+                
+                document.getElementById("registration-gateway").classList.add("hidden");
+                executeScoreCompilationPipeline();
+            }
+        });
 
         function launchSecureTestingEnvironment() {
             const nameFieldInput = document.getElementById("examinee-identity-field").value.trim();
@@ -327,6 +350,13 @@
 
             studentIdentityStr = nameFieldInput;
             testQuestionsSet = compileBalancedRandomExamPaper();
+
+            localStorage.setItem('cnet_exam_status', 'active');
+            localStorage.setItem('cnet_student_name', studentIdentityStr);
+            localStorage.setItem('cnet_questions_pool', JSON.stringify(testQuestionsSet));
+            localStorage.setItem('cnet_user_answers', JSON.stringify(localUserAnswers));
+            localStorage.setItem('cnet_timer_seconds', internalSecondsLeft);
+            localStorage.setItem('cnet_cursor_idx', cursorIndex);
 
             document.getElementById("registration-gateway").classList.add("hidden");
             document.getElementById("testing-workspace").classList.remove("hidden");
@@ -401,6 +431,7 @@
 
             synchronizeNavigatorMatrixPillStyles();
             calculateRealTimeProgressMetrics();
+            localStorage.setItem('cnet_cursor_idx', cursorIndex);
         }
 
         function resetVisualOptionButtonClasses() {
@@ -412,6 +443,7 @@
 
         function registerSelection(choiceLetterId) {
             localUserAnswers[cursorIndex] = choiceLetterId;
+            localStorage.setItem('cnet_user_answers', JSON.stringify(localUserAnswers));
             resetVisualOptionButtonClasses();
             applySelectionHighlightStyles(choiceLetterId);
             document.getElementById("item-status-badge").innerText = "Saved";
@@ -428,6 +460,7 @@
         function clearResponse() {
             if(localUserAnswers[cursorIndex] !== undefined) {
                 delete localUserAnswers[cursorIndex];
+                localStorage.setItem('cnet_user_answers', JSON.stringify(localUserAnswers));
                 resetVisualOptionButtonClasses();
                 document.getElementById("item-status-badge").innerText = "Unsaved";
                 document.getElementById("item-status-badge").className = "text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-500 uppercase tracking-wide";
@@ -474,6 +507,7 @@
         function startChronometerIntervalLoop() {
             liveTimerIntervalRef = setInterval(() => {
                 internalSecondsLeft--;
+                localStorage.setItem('cnet_timer_seconds', internalSecondsLeft);
 
                 const hoursFieldCalculation = Math.floor(internalSecondsLeft / 3600);
                 const minutesFieldCalculation = Math.floor((internalSecondsLeft % 3600) / 60);
@@ -488,6 +522,7 @@
 
                 if (internalSecondsLeft <= 0) {
                     clearInterval(liveTimerIntervalRef);
+                    localStorage.setItem('cnet_exam_status', 'finished');
                     executeScoreCompilationPipeline();
                 }
             }, 1000);
@@ -502,13 +537,11 @@
             }
             if(confirm(verificationMessage)) {
                 clearInterval(liveTimerIntervalRef);
+                localStorage.setItem('cnet_exam_status', 'finished');
                 executeScoreCompilationPipeline();
             }
         }
 
-        /**
-         * REPORT PROCESSING MATRIX COMPILE WITH DETAILED ANSWER ANALYSIS OVERLAY
-         */
         function executeScoreCompilationPipeline() {
             let finalCorrectAnswersScore = 0;
             let finalTotalAttemptsCalculated = Object.keys(localUserAnswers).length;
@@ -553,25 +586,19 @@
                 tablesRootElementDOM.appendChild(summaryRowDiv);
             });
 
-            // NEW: RUN DETAILED RESPONSE COMPONENT PACK INJECTOR
             compileResponseAnalysisDeck();
         }
 
-        /**
-         * GENERATE PERFORMANCE ANALYSIS DECK
-         * Dynamically appends all questions underneath the scorecard, mapping metrics cleanly.
-         */
         function compileResponseAnalysisDeck() {
             const deckTargetContainer = document.getElementById("analysis-questions-deck");
-            deckTargetContainer.innerHTML = ""; // Clear fallbacks
+            deckTargetContainer.innerHTML = ""; 
 
             testQuestionsSet.forEach((itemObj, idx) => {
                 const studentSelection = localUserAnswers[idx];
                 const isCorrect = studentSelection === itemObj.ans;
                 const isSkipped = studentSelection === undefined;
 
-                // Setup contextual outer card border coloring state mechanics
-                let stateBorderClass = "border-amber-200 bg-amber-50/40 text-amber-900"; // Default: Skipped
+                let stateBorderClass = "border-amber-200 bg-amber-50/40 text-amber-900"; 
                 let statusLabelText = "Skipped / Blank";
 
                 if (!isSkipped) {
@@ -584,7 +611,6 @@
                     }
                 }
 
-                // Render textual key variables mapping safely
                 const analysisCardNode = document.createElement("div");
                 analysisCardNode.className = `p-4 border rounded-xl space-y-2 text-xs ${stateBorderClass}`;
                 
@@ -605,9 +631,13 @@
                         <span class="text-emerald-700">Correct Key: ${itemObj.ans} (${itemObj[itemObj.ans.toLowerCase()]})</span>
                     </div>
                 `;
-
                 deckTargetContainer.appendChild(analysisCardNode);
             });
+        }
+
+        function wipeStorageAndReset() {
+            localStorage.clear();
+            window.location.reload();
         }
     </script>
 </body>
